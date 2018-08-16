@@ -20,6 +20,9 @@
 \usepackage{templates/beamerthemekit}
 % \usepackage{templates/beamerthemekitwide}
 
+% \usepackage[dvips]{graphicx}
+% \graphicspath{{pics/}}
+
 %% TITLE PICTURE
 
 % if a custom picture is to be used on the title page, copy it into the 'logos'
@@ -115,19 +118,52 @@
 
 \end{frame}
 
-\begin{frame}{Introduction}
-Вступление - такие вступление :)
-Современная астрофизика представлена большим количеством экспериментов, которые изучают примерно одно и то же (а зачастую - и прям совсем одно и то же, в плане объекта), но по-разному - т.е., в разных природных условиях и с использованием разных типов детекторов.
-Каждый год данных прибывает, и при этом общй дата пул ежегодно растет, как на дрожжах (см. картинку)
+\begin{frame}{The secret life of the astroparticle data}
+%или "Астрофизика - современное состояние"))
+\small
+\begin{columns}
 
+\begin{column}[t]{0.5\textwidth}
 \begin{figure}[h]
-\center{\includegraphics[width=1\linewidth]{"pics/appec_computing-diagram.jpg"}}
-\caption{Данные от экспериментов в области астрофизики}
+\vspace{-1em}
+\center{\includegraphics[width=0.8\linewidth]{pics/appec_base4.png}}
+\hspace{-1em}
+\vspace{-1em}
+\caption{\small Modern astroparticle experiments data rate [Gbytes/day], source: APPEC brochure on Computing, 2016}
 \label{ris:image}
 \end{figure}
+\end{column}
 
+\begin{column}[t]{0.5\textwidth}
+% \vspace{1.5em}
+% Вступление - такие вступление :)
+% Современная астрофизика представлена большим количеством экспериментов, которые изучают примерно одно и то же (а зачастую - и прям совсем одно и то же, в плане объекта), но по-разному - т.е., в разных природных условиях и с использованием разных типов детекторов.
+% Каждый год данных прибывает, и при этом общй дата пул ежегодно растет, как на дрожжах (см. картинку)
+\begin{itemize}
+ \item Wide range of experiments;
+ \item Looking at the same sky with diffrent eyes: different detectors, different reactions under the study;
+ \item A lot of data
+ \item Deep learning is coming...
+ \item Need for collaboration
+\end{itemize}
+
+\textcolor{red}{TODO: дописать текста, чтобы сбалансирвоать дизайн страницы}
+\end{column}
+
+\end{columns}
 \end{frame}
-
+%
+% \begin{frame}{test}
+%  \begin{columns}
+% \begin{column}[t]{5cm}
+%     text1
+% \end{column}
+%
+% \begin{column}[t]{5cm}
+% text2
+% \end{column}
+% \end{columns}
+% \end{frame}
 
 \begin{frame}{\textcolor{kit-green100}{KRAD}: \textcolor{kit-green100}{K}arlsruhe-\textcolor{kit-green100}{R}ussian \textcolor{kit-green100}{A}stroparticle \textcolor{kit-green100}{D}ata Life Cycle}
 
