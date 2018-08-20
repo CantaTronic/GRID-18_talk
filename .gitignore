@@ -8,4 +8,5 @@
 *.bcf
 *.log
 *.xml
+*.synctex.gz
 
