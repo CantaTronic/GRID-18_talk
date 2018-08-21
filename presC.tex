@@ -67,6 +67,8 @@
 \addbibresource{templates/example.bib}
 \bibhang1em
 
+\newcommand{\concl}[1]{\item[\scriptsize\raise1.25pt\hbox{\textcolor{kit-green100}{$\blacktriangleright$}}]\textcolor{kit-green100}{#1}}
+
 \begin{document}
 
 % change the following line to "ngerman" for German style date and logos
@@ -94,11 +96,10 @@
 %или "Астрофизика - современное состояние"))
 \small
 \begin{columns}
-
-  \begin{column}[t]{0.49\textwidth}
+  \begin{column}[t]{0.45\textwidth}
     \begin{figure}[h]
     \vspace{-1em}
-    \center{\includegraphics[width=0.8\linewidth]{pics/appec_base4.png}}
+    \center{\includegraphics[width=0.79\linewidth]{pics/appec_base4.png}}
     \hspace{-1em}
     \vspace{-1em}
     \caption{\small Modern astroparticle experiments data rate [Gbytes/day], source: APPEC brochure on Computing, 2016}
@@ -106,7 +107,7 @@
     \end{figure}
   \end{column}
   \hfill
-  \begin{column}[t]{0.49\textwidth}
+  \begin{column}[t]{0.53\textwidth}
     % \vspace{1.5em}
     % Вступление - такие вступление :)
     % Современная астрофизика представлена большим количеством экспериментов, которые изучают примерно одно и то же (а зачастую - и прям совсем одно и то же, в плане объекта), но по-разному - т.е., в разных природных условиях и с использованием разных типов детекторов.
@@ -121,86 +122,7 @@
 
 %     \textcolor{red}{TODO: дописать текста, чтобы сбалансирвоать дизайн страницы}
   \end{column}
-
 \end{columns}
-\end{frame}
-
-\begin{frame}{KASCADE workflow}
-\textcolor{red}{Схема - проверить!)}
-\begin{center}
-\includegraphics[width=0.8\textwidth]{pics/KCDC_workflow.png}
-\end{center}
-\end{frame}
-
-\begin{frame}{Handling data for different experiments}
-\begin{itemize}
-  \item Storage
-  \begin{itemize}
-    \item Different data formats (depends on avalilable detectors)
-    \item Common metadata format (e.g.\ time, location, atmospheric conditions)
-  \end{itemize}
-  \item Analysis
-  \begin{itemize}
-    \item Special software and system environment for each experiment
-    \item Virtualization could be useful
-  \end{itemize}
-  \item Mapping
-  \begin{itemize}
-    \item Calibrations provided by experiments
-    \item Various models
-    \item Implementations are stored
-  \end{itemize}
-  \item Access
-  \begin{itemize}
-    \item Benefits of open access
-    \item Education and outreach
-    \item Which infrastructure to use?
-  \end{itemize}
-\end{itemize}
-\end{frame}
-
-\begin{frame}[allowframebreaks]{Data storage}
-\begin{itemize}
-  \item Each experiment has its own detectors and provides its own format of raw events
-  \item Events share common metadata that is stored in the database
-  \item Some experiments are situated at remote locations with no or limited internet access, data are transferred periodically to servers on tapes or disks
-  \item With growing data sizes, distribured storage could be useful
-\end{itemize}
-\begin{center}
-\includegraphics[width=0.85\textwidth]{pics/metadata.eps}
-\end{center}
-\end{frame}
-
-\begin{frame}{Analysis}
-\begin{itemize}
-  \item Some software is unique for each experiment (e.g.\ detector calibrations, reconstruction based on raw detector readouts) and may even require dedicated system environment
-  \begin{itemize}
-    \item Virtualization could be useful
-  \end{itemize}
-  \item Some software is common for all EAS experiments, or is planned to be (e.g.\ software for shower simulation like KORSIKA)
-  \begin{itemize}
-    \item Distributed computing could be useful
-  \end{itemize}
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Mapping}
-\textcolor{red}{Содрать слайд 8 у Костюнина}
-\begin{center}
-  \includegraphics[width=0.7\textwidth]{pics/k8.pdf}
-\end{center}
-\end{frame}
-
-\begin{frame}{Access}
-\begin{itemize}
-  \item Benefits of open access
-  \item Education and outreach
-  \item Which infrastructure to use?
-\end{itemize}
-\end{frame}
-
-\begin{frame}{TODO}
-\textcolor{red}{Что ещё не хватает?}
 \end{frame}
 
 \begin{frame}{\textcolor{kit-green100}{KRAD}: \textcolor{kit-green100}{K}arlsruhe-\textcolor{kit-green100}{R}ussian \textcolor{kit-green100}{A}stroparticle \textcolor{kit-green100}{D}ata Life Cycle}
@@ -209,37 +131,200 @@
 % Суть: создание единого центра обработки астрофизических данных.
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Outline}
-\begin{itemize}
- \item сравнение KASCADE и Tunka (почему должно быть интересно объединить данные, проблемы и решения):
- %обязательно сказать, что в астрофизике такое делается вперые (хотя в целом тема не нова), и мы работаем в столрону proof of work
- \begin{itemize}
-    \item физика: в чем разница собираемых данных?
-    \item разница по метаданным
-    \item организация хранения: у KASCADE есть KCDC, и всё крайне аккурктно оргинизовано (рассказать, как),
-    у Tunka все в процессе (оказывается, есть крутой слайд у Костюнина про это (5/13))
-    \item обработка? общая она или раздельная? в чем разница? как мошла бы выглядеть общая схема обработки?
-    \item как можно было бы организовать совместный быстрый доступ пользователей к данным/инструментам анализа?
-    \item почему мы считаем, что эксперименты можно определить, и почему именно Tunka()?
- \end{itemize}
- \item Как мы думаем, это можно было бы сделать:
-    \begin{itemize}
-        \item MWS как идея
-        %при объединении распрд. ресурсов возникает такое понятие, как интероперабельность системы. она может быть обеспечена на 3-х уровнях: организационном (т.е., руками), техническом (автоматизация процессов)  и семантическом
-        \item какие-нибудь схематические догадки о том, как это все касается нас
-        \item job workflow
-        \item какую систему будем юзать?
-\end{itemize}
-\item А что уже сделанно к наст моменту?
-    \begin{itemize}
-     \item общая схема KCDC
-     \item astroparticle.online
-     \item описание метаданных
-    \end{itemize}
-\item Conclusion: мы собрались делать большое дело, у нас есть богатая история, много планов и даже чуть-чуть из них уже сделано. Следующим шагом проекта станет...
-% \tableofcontents
-\end{itemize}
+\begin{frame}{KASCADE}
+\textcolor{red}{Short descr.}
+\end{frame}
 
+\begin{frame}{TUNKA}
+\textcolor{red}{Short descr.}
+\end{frame}
+
+% \begin{frame}[allowframebreaks]{Outline}
+% \begin{itemize}
+%  \item сравнение KASCADE и Tunka (почему должно быть интересно объединить данные, проблемы и решения):
+%  %обязательно сказать, что в астрофизике такое делается вперые (хотя в целом тема не нова), и мы работаем в столрону proof of work
+%  \begin{itemize}
+%     \item физика: в чем разница собираемых данных?
+%     \item разница по метаданным
+%     \item организация хранения: у KASCADE есть KCDC, и всё крайне аккурктно оргинизовано (рассказать, как),
+%     у Tunka все в процессе (оказывается, есть крутой слайд у Костюнина про это (5/13))
+%     \item обработка? общая она или раздельная? в чем разница? как мошла бы выглядеть общая схема обработки?
+%     \item как можно было бы организовать совместный быстрый доступ пользователей к данным/инструментам анализа?
+%     \item почему мы считаем, что эксперименты можно определить, и почему именно Tunka()?
+%  \end{itemize}
+%  \item Как мы думаем, это можно было бы сделать:
+%     \begin{itemize}
+%         \item MWS как идея
+%         %при объединении распрд. ресурсов возникает такое понятие, как интероперабельность системы. она может быть обеспечена на 3-х уровнях: организационном (т.е., руками), техническом (автоматизация процессов)  и семантическом
+%         \item какие-нибудь схематические догадки о том, как это все касается нас
+%         \item job workflow
+%         \item какую систему будем юзать?
+% \end{itemize}
+% \item А что уже сделанно к наст моменту?
+%     \begin{itemize}
+%      \item общая схема KCDC
+%      \item astroparticle.online
+%      \item описание метаданных
+%     \end{itemize}
+% \item Conclusion: мы собрались делать большое дело, у нас есть богатая история, много планов и даже чуть-чуть из них уже сделано. Следующим шагом проекта станет...
+% % \tableofcontents
+% \end{itemize}
+% 
+% \end{frame}
+
+\begin{frame}{?? TITLE ??}
+\begin{columns}
+  \begin{column}[t]{0.49\textwidth}
+    \begin{block}{Different}
+      \begin{itemize}
+        \item Data format (depends on avalilable detectors)
+        \item Information on detector properties (e.g.\ calibrations)
+        \item Dedicated software for analyzing data
+        \item Sometimes: special system environment for the software
+        \item \textcolor{red!50!black}{Currently}: separate APIs and user interfaces for different experiments
+      \end{itemize}
+    \end{block}
+  \end{column}
+  \hfill
+  \begin{column}[t]{0.49\textwidth}
+    \begin{block}{Common}
+      \begin{itemize}
+        \item Metadata format (e.g.\ time, location, atmospheric conditions)
+        \item Software for EAS simulation (e.g. KORSIKA)
+        \item Shower parameters
+        \item Theoretical models
+        \item \textcolor{blue!50!black}{Bright future}: unified API and user interface for different experiments
+      \end{itemize}
+    \end{block}
+  \end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{What is WMS?}
+\textcolor{red}{\textit{Попячено с доклада Петросяна}}
+\begin{itemize}
+  \item WMS~--- workload management system
+  \item Providing a central queue for all users, makes hundreds of distributed sites appear as local
+  \item Hide middleware while supporting diversity and evolution
+  \begin{itemize}
+    \item WMS interacts with middleware, users see only high level workflow
+    \item Automation engines built in WMS, not exposed to users
+  \end{itemize}
+  \item Hide variations in infrastructure
+  \begin{itemize}
+    \item WMS presents uniform ‘job’ slots to user
+    \item Easy to integrate grid sites, clouds, HPC sites
+  \end{itemize}
+  \item Use the same system for simulation, data processing and users analysis
+  \item Similar ideas have been implemented in several independent systems developed by LHC experiments: AliEn, Dirac, PanDA
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Data storage}
+\begin{itemize}
+  \item Some experiments (in our case, TUNKA) are situated at remote locations with no or limited internet access, raw data are transferred periodically to servers on tapes or disks
+  \item Raw data are pre-analyzed, so-called ``direct'' observables ($e$, $\mu$, $\gamma$, $\hat{C}$, radio, etc.) are obtained, events are stored on servers
+  \item Each experiment has its own detectors and provides its own format of events
+  \item Events share \emph{common metadata} (e.g.\ time, location, atmospheric conditions)
+  \item It is proposed to store unique event id and metadata in the unified database
+  \item With growing data sizes, distribured storage for events could be useful
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Proposed cosmic-ray metadata structure}
+\begin{center}
+\includegraphics[width=0.82\textwidth]{pics/metadata.eps}
+\end{center}
+\end{frame}
+
+\begin{frame}{Data analysis}
+\begin{itemize}
+  \item Software for data analysis depends on a particular experiment
+  \begin{itemize}
+    \item It may even require dedicated system environment
+  \end{itemize}
+  \concl{Virtualization could be useful}
+  \item Data analysis requires huge amounts of input data
+  \begin{itemize}
+    \item It is often more optimal to perform it on the same site the data are stored
+  \end{itemize}
+  \concl{Job management could handle the task}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Simulation}
+\begin{itemize}
+  \item The software for EAS simulation (e.g.\ KORSIKA) does not depend on a particular experiment
+  \concl{Simulations require standartized system environment}
+  \item Simulations require small amounts of input data
+  \item Simulations can be done independently for different events
+  \concl{Simulations are easily scalable}
+  \item Simulations require a lot of computing resources
+  \concl{Conclusion: distributed computing could be useful}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Mapping of observables between experiments}
+\textcolor{red}{Надо что-то написать}
+
+\textcolor{red}{Можно ориентироваться на слайд 8 у Костюнина}
+
+\begin{block}{Draft}
+  \begin{itemize}
+    \item Calibrations provided by experiments
+    \item Various models
+    \item Implementations are stored
+  \end{itemize}
+\end{block}
+% \begin{center}
+%   \includegraphics[width=0.7\textwidth]{pics/k8.pdf}
+% \end{center}
+\end{frame}
+
+\begin{frame}{Access}
+\begin{block}{Draft}
+  \begin{itemize}
+    \item Benefits of open access
+    \item Education and outreach
+    \item Which infrastructure to use?
+  \end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Bright future}
+% \textcolor{red}{Схема~--- проверить!)}
+\begin{center}
+\includegraphics[width=0.85\textwidth]{pics/img00.png}
+\end{center}
+\end{frame}
+
+\begin{frame}{Current status and outlook}
+\begin{block}{А что уже сделанно к наст моменту?}
+  \begin{itemize}
+    \item общая схема KCDC
+    \item astroparticle.online
+    \item описание метаданных
+  \end{itemize}
+\end{block}
+\begin{block}{Conclusion}
+  \begin{itemize}
+    \item Мы собрались делать большое дело, у нас есть богатая история, много планов и даже чуть-чуть из них уже сделано. Следующим шагом проекта станет...
+  \end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{TODO}
+\textcolor{red}{Что ещё не хватает?}
+\end{frame}
+
+\begin{frame}{}
+\Huge
+\begin{center}
+\textcolor{kit-green100}{Thank you\\for our attention!}
+
+\vspace{1em}
+\textcolor{kit-green100}{Any questions?}
+\end{center}
 \end{frame}
 
 %
