@@ -68,6 +68,7 @@
 \bibhang1em
 
 \newcommand{\concl}[1]{\item[\scriptsize\raise1.25pt\hbox{\textcolor{kit-green100}{$\blacktriangleright$}}]\textcolor{kit-green100}{#1}}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
 
 \begin{document}
 
@@ -97,14 +98,11 @@
 \small
 \begin{columns}
   \begin{column}[t]{0.45\textwidth}
-    \begin{figure}[h]
-    \vspace{-1em}
-    \center{\includegraphics[width=0.79\linewidth]{pics/appec_base4.png}}
-    \hspace{-1em}
-    \vspace{-1em}
-    \caption{\small Modern astroparticle experiments data rate [Gbytes/day], source: APPEC brochure on Computing, 2016}
-    \label{ris:image}
-    \end{figure}
+    \begin{center}
+      \includegraphics[width=0.79\linewidth]{pics/appec_base4.png}
+    \end{center}
+    \vspace{-2\parsep}
+    \small Modern astroparticle experiments data rate [Gbytes/day]\footnotemark[1] %, source: APPEC brochure on Computing, 2016}
   \end{column}
   \hfill
   \begin{column}[t]{0.53\textwidth}
@@ -115,7 +113,7 @@
     \begin{itemize}
     \item Wide range of experiments;
     \item Looking at the same sky with diffrent eyes: different detectors, different reactions under the study;
-    \item Common data rate for astrophysical experiments all together is a few PBytes/yeary, which is comparable to the current LHC output \textcolor{red}{(ссылка на брощюру!!!)}
+    \item Common data rate for astrophysical experiments all together is a few PBytes/yeary, which is comparable to the current LHC output\footnotemark[1] % \textcolor{red}{(ссылка на брощюру!!!)}
     \item Deep learning is coming...
     \item Need for collaboration
     \end{itemize}
@@ -123,16 +121,20 @@
 %     \textcolor{red}{TODO: дописать текста, чтобы сбалансирвоать дизайн страницы}
   \end{column}
 \end{columns}
+  \footnotesize\footnotetext[1]{APPEC brochure on Computing, 2016}
 \end{frame}
 
 \begin{frame}{\textcolor{kit-green100}{KRAD}: \textcolor{kit-green100}{K}arlsruhe-\textcolor{kit-green100}{R}ussian \textcolor{kit-green100}{A}stroparticle \textcolor{kit-green100}{D}ata Life Cycle}
-\vspace{-1em     }
-    \begin{figure}[h]
-    \center{\includegraphics[width=0.9\linewidth]{pics/Collab.png}}
+% \vspace{-1em     }
+%     \begin{figure}[h]
+\begin{center}
+  \includegraphics[width=0.9\linewidth]{pics/Collab.png}
+\end{center}
+\vspace{-2\parsep}
 %     \caption{\small The frist Russian-German big data collaboration}
-    \label{ris:image}
-    \end{figure}
-The frist Russian-German big data collaboration
+%     \label{ris:image}
+%     \end{figure}
+The first Russian-German big data collaboration
 
 \end{frame}
 
@@ -149,14 +151,17 @@ Work packages:
 \end{frame}
 
 \begin{frame}{KASCADE}
-    \begin{figure}[h]
+%     \begin{figure}[h]
 %     \vspace{-1em}
-    \center{\includegraphics[width=0.79\linewidth]{pics/timeline_kascade.png}}
+\begin{center}
+  \includegraphics[width=0.79\linewidth]{pics/timeline_kascade.png}
+\end{center}
+\vspace{-2\parsep}
 %     \hspace{-1em}
 %     \vspace{-1em}
-    \caption{\small The KASCADE experiment timeline}
-    \label{ris:image}
-    \end{figure}
+%     \caption{\small The KASCADE experiment timeline}
+%     \label{ris:image}
+%     \end{figure}
 \textcolor{red}{Short descr.}
 \end{frame}
 
