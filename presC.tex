@@ -67,7 +67,8 @@
 \addbibresource{templates/example.bib}
 \bibhang1em
 
-\newcommand{\concl}[1]{\item[\scriptsize\raise1.25pt\hbox{\textcolor{kit-green100}{$\blacktriangleright$}}]\textcolor{kit-green100}{#1}}
+\newcommand{\itemarrow}{\scriptsize\raise1.25pt\hbox{\textcolor{kit-green100}{$\blacktriangleright$}}}
+\newcommand{\concl}[1]{\item[\itemarrow]\textcolor{kit-green100}{#1}}
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 
 \begin{document}
@@ -151,22 +152,113 @@ Work packages:
 \end{frame}
 
 \begin{frame}{KASCADE}
-%     \begin{figure}[h]
-%     \vspace{-1em}
-\begin{center}
-  \includegraphics[width=0.79\linewidth]{pics/timeline_kascade.png}
-\end{center}
-\vspace{-2\parsep}
-%     \hspace{-1em}
-%     \vspace{-1em}
+\footnotesize
+\begin{minipage}{0.69\textwidth}
+  \includegraphics[width=1\textwidth,height=0.45\textheight]{pics/timeline_kascade.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.29\textwidth}
+  \begin{block}{Calorimeter}
+    \begin{itemize}
+      \setlength{\itemsep}{0pt}
+      \item iron sampling
+      \item liquid ionization chambers
+      \item area 16m x 20m
+      \item height 4.5m
+    \end{itemize}
+  \end{block}
+\end{minipage}
+
+\vspace{-1ex}
+\begin{minipage}[t]{0.48\textwidth}
+  \begin{block}{KASCADE}
+    \begin{itemize}
+      \setlength{\itemsep}{0pt}
+      \item 200m x 200m field
+      \item 252 detector stations
+      \item station:
+      \item[] ~--~$e$/$\gamma$ detectors (liquid scintillator)
+      \item[] ~--~$\mu$ detector (plastic scintillator)
+    \end{itemize}
+  \end{block}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+  \begin{block}{GRANDE}
+    \begin{itemize}
+      \setlength{\itemsep}{0pt}
+      \item 700m x 700m field
+      \item 37 detector stations
+      \item station:
+      \item[] ~--~10m$^2$
+      \item[] ~--~all-charged particle detector (16 plastic scintillators)
+    \end{itemize}
+  \end{block}
+\end{minipage}
+% \begin{center}
+% \end{center}
+% \vspace{-2\parsep}
 %     \caption{\small The KASCADE experiment timeline}
-%     \label{ris:image}
-%     \end{figure}
-\textcolor{red}{Short descr.}
+% \textcolor{red}{Short descr.}
 \end{frame}
 
 \begin{frame}{TUNKA}
-\textcolor{red}{Short descr.}
+\footnotesize
+\vspace{-2em}
+\begin{minipage}[t]{0.48\textwidth}
+  \begin{block}{Tunka-133}
+    \centering
+    \includegraphics[height=0.23\textheight]{pics/Tunka-133.jpg}\vspace{-2ex}
+
+    \begin{itemize}
+      \setlength{\itemsep}{0pt}
+      \item 133 photomultipliers
+      \item measures EAS Cherenkov light
+    \end{itemize}
+  \end{block}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+  \begin{block}{Tunka-Rex}
+    \centering
+    \includegraphics[height=0.23\textheight]{pics/Tunka-Rex.jpg}\vspace{-2ex}
+
+    \begin{itemize}
+      \setlength{\itemsep}{0pt}
+      \item 63 antennas
+      \item measures EAS radio-emission
+    \end{itemize}
+  \end{block}
+\end{minipage}
+
+\vspace{-1ex}
+\begin{minipage}[t]{0.48\textwidth}
+  \begin{block}{Tunka-Grande}
+    \centering
+    \includegraphics[height=0.23\textheight]{pics/Hiller_Roman-005.jpg}\vspace{-2ex}
+
+    \begin{itemize}
+      \setlength{\itemsep}{0pt}
+      \item 380 scintillators 0.64m$^2$ each
+      \item measures $e$/$\mu$ from EAS
+    \end{itemize}
+  \end{block}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+  \begin{block}{Tunka-HiSCORE}
+    \centering
+    \includegraphics[height=0.23\textheight]{pics/Tunka-HiSCORE.jpg}\vspace{-2ex}
+
+    \begin{itemize}
+      \setlength{\itemsep}{0pt}
+      \item 47 photomultipliers
+      \item measures EAS Cherenkov light
+    \end{itemize}
+  \end{block}
+\end{minipage}
+
+
 \end{frame}
 
 % \begin{frame}[allowframebreaks]{Outline}
@@ -231,7 +323,7 @@ Work packages:
 \end{frame}
 
 \begin{frame}{What is WMS?}
-\textcolor{red}{\textit{Попячено с доклада Петросяна}}
+\textcolor{red}{\textit{Taken from Petrosyan's talk}}
 \begin{itemize}
   \item WMS~--- workload management system
   \item Providing a central queue for all users, makes hundreds of distributed sites appear as local
@@ -251,6 +343,24 @@ Work packages:
 \end{frame}
 
 \begin{frame}{Data storage}
+\begin{tabular*}{1\textwidth}{p{0.45\textwidth}@{\extracolsep{\fill}}p{0.45\textwidth}}
+\hline\multicolumn{2}{c}{Location} \\
+Experiments: remote locations with no or limited internet access &
+Servers: data are transferred periodically on tapes or disks \\
+\hline\multicolumn{2}{c}{Data} \\
+Raw detector readouts: analyzed offline, not stored &
+Pre-analyzed events: stored on servers \\
+\hline\multicolumn{2}{c}{Different \& common} \\
+Each experiment has its own detectors and provides its own format of events &
+Events share \emph{common metadata} (e.g.\ time, location, atmospheric conditions) \\
+\hline\multicolumn{2}{c}{Storage} \\
+It is proposed to store unique event id and metadata in the unified database &
+With growing data sizes, distribured storage for events could be useful \\
+\hline
+\end{tabular*}
+\end{frame}
+
+\begin{frame}{Data storage}
 \begin{itemize}
   \item Some experiments (in our case, TUNKA) are situated at remote locations with no or limited internet access, raw data are transferred periodically to servers on tapes or disks
   \item Raw data are pre-analyzed, so-called ``direct'' observables ($e$, $\mu$, $\gamma$, $\hat{C}$, radio, etc.) are obtained, events are stored on servers
@@ -262,6 +372,7 @@ Work packages:
 \end{frame}
 
 \begin{frame}{Proposed cosmic-ray metadata structure}
+\vspace{-1.5em}
 \begin{center}
 \includegraphics[width=0.82\textwidth]{pics/metadata.eps}
 \end{center}
@@ -295,9 +406,9 @@ Work packages:
 \end{frame}
 
 \begin{frame}{Mapping of observables between experiments}
-\textcolor{red}{Надо что-то написать}
+\textcolor{red}{We need to write something here}
 
-\textcolor{red}{Можно ориентироваться на слайд 8 у Костюнина}
+\textcolor{red}{We could look at Kostunin's slide \#8}
 
 \begin{block}{Draft}
   \begin{itemize}
@@ -329,22 +440,22 @@ Work packages:
 \end{frame}
 
 \begin{frame}{Current status and outlook}
-\begin{block}{А что уже сделанно к наст моменту?}
+\begin{block}{And what has already been done so far?}
   \begin{itemize}
-    \item общая схема KCDC
+    \item KCDC general scheme
     \item astroparticle.online
-    \item описание метаданных
+    \item metadata description
   \end{itemize}
 \end{block}
 \begin{block}{Conclusion}
   \begin{itemize}
-    \item Мы собрались делать большое дело, у нас есть богатая история, много планов и даже чуть-чуть из них уже сделано. Следующим шагом проекта станет...
+    \item We are going to do a great job, we have a rich history, many plans and even a few of them have already been done. The next step of the project will be\ldots
   \end{itemize}
 \end{block}
 \end{frame}
 
 \begin{frame}{TODO}
-\textcolor{red}{Что ещё не хватает?}
+\textcolor{red}{What else is missing?}
 \end{frame}
 
 \begin{frame}{}
