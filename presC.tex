@@ -29,8 +29,7 @@
 \selectlanguage{english}
 
 %INTRODUCTION
-% \section{Introduction}
-% \input{intro.tex}
+\input{intro.tex}
 
 % \section{The project objectives}
 \section{The data integration approach}
@@ -123,21 +122,93 @@
 \end{frame}
 
 \begin{frame}{Data-oriented approach}
-The data information:
+% \vspace{-1em}
+What data do we work with?
+
+% \vspace{3em}
+
+% \parbox[c][0.22\textheight][t]{0.48\textwidth}{
 \begin{itemize}
-  \item Data types:
+\item Data types:
   \begin{itemize}
     \item Raw detector readouts;
     \item Pre-analyzed events;
-    \item Metadata;
+    \item Metadata
   \end{itemize}
-  \item Data structure:
+% }
+% \hfill
+
+% \parbox[c][t]{0.48\textwidth}{
+ \item Data structure:
   \begin{itemize}
     \item Different formats;
     \item Different messengers;
-    \item Common metadata;
+    \item Common metadata
   \end{itemize}
-\end{itemize}
+  \end{itemize}
+% }
+% \begin{columns}
+% \begin{column}{0.5\textwidth}
+% Data types:
+%   \begin{itemize}
+%     \item Raw detector readouts;
+%     \item Pre-analyzed events;
+%     \item Metadata
+%   \end{itemize}
+% \end{column}
+% \begin{column}{0.5\textwidth}  %%<--- here
+%  Data structure:
+%   \begin{itemize}
+%     \item Different formats;
+%     \item Different messengers;
+%     \item Common metadata
+%   \end{itemize}
+% \end{column}
+% \end{columns}
+
+% \begin{tabular}{|c|c|} \hline
+% Data types & Data structure \\ \hline
+% \begin{itemize}
+%  \item r1 &  \item r2 \\
+%  \item r3 &  \item r4 \\ \hline
+%   \end{itemize}
+% \end{tabular}
+
+
+% \vspace{2em}
+% \begin{minipage}[t]{0.4\textwidth}
+% Data types:
+%   \begin{itemize}
+%     \item Raw detector readouts;
+%     \item Pre-analyzed events;
+%     \item Metadata;
+%   \end{itemize}
+% \end{minipage}
+% \hfill
+% \begin{minipage}[t]{0.4\textwidth}
+%  Data structure:
+%   \begin{itemize}
+%     \item Different formats;
+%     \item Different messengers;
+%     \item Common metadata;
+%   \end{itemize}
+% \end{minipage}
+
+
+% \begin{itemize}
+%   \item Data types:
+%   \begin{itemize}
+%     \item Raw detector readouts;
+%     \item Pre-analyzed events;
+%     \item Metadata;
+%   \end{itemize}
+%   \item Data structure:
+%   \begin{itemize}
+%     \item Different formats;
+%     \item Different messengers;
+%     \item Common metadata;
+%   \end{itemize}
+% \end{itemize}
 
 Our approach:
 \begin{itemize}
@@ -218,8 +289,10 @@ Our approach:
 
 \begin{frame}{Distributed analysis and simulation scheme}
 % \textcolor{red}{Схема~--- проверить!)}
+\vspace{-1em}
 \begin{center}
-\includegraphics[width=0.85\textwidth]{pics/KCDC_workflow_f1.png}
+% \includegraphics[width=0.85\textwidth]{pics/KCDC_workflow_f1.png}
+\includegraphics[width=0.85\textwidth]{pics/kcdc_scheme_k.png}
 \end{center}
 \end{frame}
 
@@ -250,7 +323,7 @@ Our approach:
 % \end{frame}
 
 % %CONCLUSION
-% \input{concl.tex}
+\input{concl.tex}
 
 % \appendix
 % \beginbackup
