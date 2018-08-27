@@ -32,7 +32,7 @@
 \input{intro.tex}
 
 % \section{The project objectives}
-\section{The main section}
+\section{The data integration approach}
 
 \begin{frame}{The project objectives}
 % Work packages:
@@ -69,20 +69,24 @@
   \end{block}
 \end{minipage}
 
+%  \begin{exampleblock}{title}
+%   text
+%  \end{exampleblock}
+
 \begin{minipage}[t]{0.48\textwidth}
-  \begin{block}{Current state}
+  \begin{exampleblock}{Current state}
     \begin{itemize}
       \item Separate APIs and UIs for different experiments
     \end{itemize}
-  \end{block}
+  \end{exampleblock}
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.48\textwidth}
-  \begin{block}{Our objective}
+  \begin{exampleblock}{Our objective}
     \begin{itemize}
       \item Unified API and UIs for different experiments
     \end{itemize}
-  \end{block}
+  \end{exampleblock}
 \end{minipage}
 \end{frame}
 
@@ -96,14 +100,14 @@
   \item Unified usage of the distributed remote data and common data analysis;
   \item Conceal various low-level software and provide unified high-level interface;
   \end{itemize}
-%   \item 
+%   \item
 %   Hide middleware while supporting diversity and evolution
 %   \begin{itemize}
 %     \item WMS interacts with middleware, users see only high level workflow
 %     \item Automation engines built in WMS, not exposed to users
 %   \end{itemize}
   \item Provide the common way to issue tasks to different types of the distibuted sites;
-  \item 
+  \item
 %   Use the same system for simulation, data processing and users analysis
   The same system for the data access, analysis and simulation.
 %   \item Similar ideas have been implemented in several independent systems developed by LHC experiments: AliEn, Dirac, PanDA
@@ -212,9 +216,9 @@ Our approach:
 \end{frame}
 
 % \begin{frame}{Mapping of observables between experiments}
-% 
+%
 % \textcolor{red}{Draw the sheme of the mapping!!! See the Kostunin's slide \#8}
-% 
+%
 % \begin{block}{Draft}
 %   \begin{itemize}
 %     \item Calibrations provided by experiments
@@ -237,118 +241,46 @@ Our approach:
 % \end{block}
 % \end{frame}
 
-\begin{frame}[allowframebreaks]{Current status and outlook}
-\begin{itemize}
-  \item The principal task for the multi-messenger astrophysics is to organize a joint analysis of data collected from different sources;
-  \item A joint Russian-German project of the KRAD is devoted to the investigation of this problem;
-  \item The objectives of the project include:
-  \begin{itemize}
-    \item a data center for astrophysical data;
-    \item software environment for the distributed analysis of this data;
-    \item open access to this data for everyone;
-    \item obtaining new knowledge about the laws of the universe by applying the most modern methods of machine learning to the big data collected;
-  \end{itemize}
-  \framebreak
-  \item By now:
-  \begin{itemize}
-    \item The KASCADE project has a data center called KCDC, that is planned to serve as the basis for the future common center for data access;
-    \item The differences in the data formats were analyzed and solutions for organizing storage and distributed data processing were proposed;
-    \item A scheme of a relational database for the future data center is designed using a metadata-based approach;
-  \end{itemize}
-  \item The possibilities to apply the results of the project to educational and oureach activities are being explored; at present:
-  \begin{itemize}
-    \item KIT students use the KCDC for classes;
-    \item The joint resource astroparticle.online is created to provide access to KASCADE and TAIGA data;
-    \item astroparticle.online is used by students of the Irkutsk State University in the course ``The fundamentals of modern astrophysics''
-  \end{itemize}
-\end{itemize}
-% \begin{block}{And what has already been done so far?}
+\input{concl.tex}
+%
+% \begin{frame}[allowframebreaks]{Current status and outlook}
+% \begin{itemize}
+%   \item The principal task for the multi-messenger astrophysics is to organize a joint analysis of data collected from different sources;
+%   \item A joint Russian-German project of the KRAD is devoted to the investigation of this problem;
+%   \item The objectives of the project include:
 %   \begin{itemize}
-%     \item KCDC general scheme
-%     \item astroparticle.online
-%     \item metadata description
+%     \item a data center for astrophysical data;
+%     \item software environment for the distributed analysis of this data;
+%     \item open access to this data for everyone;
+%     \item obtaining new knowledge about the laws of the universe by applying the most modern methods of machine learning to the big data collected;
 %   \end{itemize}
-% \end{block}
-% \begin{block}{Conclusion}
+%   \framebreak
+%   \item By now:
 %   \begin{itemize}
-%     \item We are going to do a great job, we have a rich history, many plans and even a few of them have already been done. The next step of the project will be\ldots
+%     \item The KASCADE project has a data center called KCDC, that is planned to serve as the basis for the future common center for data access;
+%     \item The differences in the data formats were analyzed and solutions for organizing storage and distributed data processing were proposed;
+%     \item A scheme of a relational database for the future data center is designed using a metadata-based approach;
 %   \end{itemize}
-% \end{block}
-\end{frame}
-
-\begin{frame}{}
-\Huge
-\begin{center}
-\textcolor{kit-green100}{Thank you\\for your attention!}
-
-\vspace{1em}
-\Large
-% \textcolor{kit-green100}{
-Any questions?
-% }
-\end{center}
-\end{frame}
-
-%
-% \begin{frame}{test}
-%  \begin{columns}
-% \begin{column}[t]{5cm}
-%     text1
-% \end{column}
-%
-% \begin{column}[t]{5cm}
-% text2
-% \end{column}
-% \end{columns}
-% \end{frame}
-
-
-% \section{Section 1}
-% \subsection{Subsection 1.1}
-% \begin{frame}{Example slide A}
-% \begin{itemize}
-% \item PCM, Citation: \cite{becker2008a} %\language
-% \pause
-% \item Bullet point 2
-% \item \dots
+%   \item The possibilities to apply the results of the project to educational and oureach activities are being explored; at present:
+%   \begin{itemize}
+%     \item KIT students use the KCDC for classes;
+%     \item The joint resource astroparticle.online is created to provide access to KASCADE and TAIGA data;
+%     \item astroparticle.online is used by students of the Irkutsk State University in the course ``The fundamentals of modern astrophysics''
+%   \end{itemize}
 % \end{itemize}
 % \end{frame}
 %
-% \subsection{Subsection 1.2}
-% \begin{frame}{Example slide B}
-% \begin{block}{Block 1}
-% \begin{itemize}
-% \item Bullet point 1
-% \pause
-% \item Bullet point 2
-% \item \dots
-% \end{itemize}
-% \end{block}
-% \end{frame}
+% \begin{frame}{}
+% \Huge
+%     \begin{center}
+%         \textcolor{kit-green100}{Thank you\\for your attention!}
 %
-% \section{Section 2}
-% \begin{frame}{Example slide C}
-% \begin{exampleblock}{Example 1}
-% \begin{itemize}
-% \item Bullet point 1
-% \pause
-% \item Bullet point 2
-% \item \dots
-% \end{itemize}
-% \end{exampleblock}
+%         \vspace{1em}
+%         \Large
+%         Any questions?
+%     \end{center}
 % \end{frame}
-%
-% \begin{frame}{Example slide D}
-% \begin{alertblock}{Alert 1}
-% \begin{itemize}
-% \item Bullet point 1
-% \pause
-% \item Bullet point 2
-% \item \dots
-% \end{itemize}
-% \end{alertblock}
-% \end{frame}
-%
+
 % \appendix
 % \beginbackup
 %
