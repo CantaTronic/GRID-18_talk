@@ -19,6 +19,9 @@
 \newcommand{\itemarrow}{\scriptsize\raise1.25pt\hbox{\textcolor{kit-green100}{$\blacktriangleright$}}}
 \newcommand{\concl}[1]{\item[\itemarrow]\textcolor{kit-green100}{#1}}
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\newlength{\cellwidth}
+\setlength{\cellwidth}{0.43\textwidth}
+\newcommand{\cellbox}[1]{\parbox{\cellwidth}{\vspace{1ex}#1\vspace{1ex}}}
 
 \begin{document}
 
@@ -26,7 +29,7 @@
 \selectlanguage{english}
 
 \section{Introduction}
-\input{intro.tex}
+% \input{intro.tex}
 
 % \section{The project objectives}
 \section{The main section}
@@ -43,33 +46,44 @@
 \end{frame}
 
 \begin{frame}{Deep into KASCADE and Tunka data formats}
-\textcolor{red}{Divide the blocks!!}
-\begin{columns}
-  \begin{column}[t]{0.49\textwidth}
-    \begin{block}{Different}
-      \begin{itemize}
-        \item Data format (depends on avalilable detectors)
+\vspace{-2em}
+\begin{minipage}[t]{0.48\textwidth}
+  \begin{block}{Different}
+    \begin{itemize}
+      \item Data format (depends on avalilable detectors)
 %         \item Information on detector properties (e.g.\ calibrations)
-        \item Dedicated software for analyzing data
-        \item Special system environment for the software
-        \item \textcolor{red!50!black}{Current state}: separate APIs and UIs for different experiments
-      \end{itemize}
-    \end{block}
+      \item Dedicated software for analyzing data
+      \item Special system environment for the software
+    \end{itemize}
+  \end{block}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+  \begin{block}{Common}
+    \begin{itemize}
+      \item Metadata format (e.g.\ time, location, atmospheric conditions)
+      \item Software for EAS simulation (e.g. KORSIKA)
+      \item Shower parameters
+      \item Theoretical models
+    \end{itemize}
+  \end{block}
+\end{minipage}
 
-  \end{column}
-  \hfill
-  \begin{column}[t]{0.49\textwidth}
-    \begin{block}{Common}
-      \begin{itemize}
-        \item Metadata format (e.g.\ time, location, atmospheric conditions)
-        \item Software for EAS simulation (e.g. KORSIKA)
-        \item Shower parameters
-        \item Theoretical models
-        \item \textcolor{blue!50!black}{Outlook}: unified API and UIs for different experiments
-      \end{itemize}
-    \end{block}
-  \end{column}
-\end{columns}
+\begin{minipage}[t]{0.48\textwidth}
+  \begin{block}{Current state}
+    \begin{itemize}
+      \item Separate APIs and UIs for different experiments
+    \end{itemize}
+  \end{block}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+  \begin{block}{Our objective}
+    \begin{itemize}
+      \item Unified API and UIs for different experiments
+    \end{itemize}
+  \end{block}
+\end{minipage}
 \end{frame}
 
 \begin{frame}{WMS~--- workload management system}
@@ -100,17 +114,17 @@
 The data information:
 \begin{itemize}
   \item Data types:
-%   \begin{itemize}
-%     \item Raw detector readouts;
-%     \item Pre-analyzed events;
-%     \items metadata;
-%   \end{itemize}
-%   \item Data structure:
-%   \begin{itemize}
-%     \item different formats;
-%     \item different messengers;
-%     \item common metadata;
-%   \end{itemize}
+  \begin{itemize}
+    \item Raw detector readouts;
+    \item Pre-analyzed events;
+    \item Metadata;
+  \end{itemize}
+  \item Data structure:
+  \begin{itemize}
+    \item Different formats;
+    \item Different messengers;
+    \item Common metadata;
+  \end{itemize}
 \end{itemize}
 
 Our approach:
@@ -119,8 +133,6 @@ Our approach:
  \item With growing data sizes, distribured storage for events could be useful
 \end{itemize}
 \end{frame}
-
-
 
 % \begin{tabular*}{1\textwidth}{p{0.45\textwidth}@{\extracolsep{\fill}}p{0.45\textwidth}}
 % \hline\multicolumn{2}{c}{Location} \\
@@ -172,18 +184,24 @@ Our approach:
 \end{frame}
 
 \begin{frame}{Simulation}
-\textcolor{red}{Rewrite as a table with a common conclusion}
-\begin{itemize}
-  \item The software for EAS simulation (e.g.\ KORSIKA) does not depend on a particular experiment
-  \concl{Simulations require standartized system environment}
-  \item Simulations require small amounts of input data
-  \item Simulations can be done independently for different events
-  \concl{Simulations are easily scalable}
-  \item Simulations require a lot of computing resources
-  \concl{HPC resources are required}
-%   \concl{The common conclusion: distributed computing could be useful}
-\end{itemize}
-The common conclusion: distributed computing could be useful
+\centering
+\begin{tabular*}{1\textwidth}{c@{~~~$\Rightarrow$~~~}c}
+\multicolumn{1}{c}{\textbf{Feature}} &
+\multicolumn{1}{c}{\textbf{Consequence}} \\ \hline
+\cellbox{The software for EAS simulation (e.g.\ KORSIKA) does not depend on a particular experiment} &
+\cellbox{Simulations require standartized system environment} \\
+\cellbox{
+  Simulations require small amounts of input data
+
+  Simulations can be done independently for different events
+} &
+\cellbox{Simulations are easily scalable} \\
+\cellbox{Simulations require a lot of computing resources} &
+\cellbox{HPC sites are needed} \\ \hline
+\end{tabular*}
+
+\vspace{1ex}
+\centering\textbf{\textcolor{kit-green100}{Distributed computing could be useful}} \\
 \end{frame}
 
 \begin{frame}{Distributed analysis and simulation scheme}
@@ -219,21 +237,31 @@ The common conclusion: distributed computing could be useful
 % \end{block}
 % \end{frame}
 
-\begin{frame}{Current status and outlook}
-% - Для мульти-месснджер астрофизики принципиальной является задача организации совместного анализа данных собранных с разичных источников:
-% - Исследованию данной проблемы посвящен совместный российко-немецкий проект КРАД;
-% - В Цели проекта входит организация:
-%     + дата-центра для астрофизических данных
-%     + программной среды для распределенного анализа этих данных
-%     + обеспечения открытого доступа к тим данным для всех желающих
-%     + исзвлечение новых знаний об устростве вселенной посредствном применения соврмееннейших методов машинного обучения на собранных больших данных;
-% - К настоящему моменту:
-%     + Имеется дата-центр проекта Касакд под названием КСДС, на базе которого планируется создать в будущем общий центр доступа к данным;
-%     + были проанализированны различия в форматах данных и предложены решения по организации хранения и распределённой обработки данных;
-%     + составлена схема реляционной базы данных для будущего дата-центра, с использованием metadata-based approach.
-%     + исследются возможности применения результатов проекта к образовательной деятельности, в настоящее время студенты КИТа используют КСДС для занятий, так же создан 
-%     совместный ресурс astroparticle.online для обеспечения доступа к данным KASCADE  и TAIGA. Данный ресурс используется студентами ИГУ в курсе
-%     "основы современной астрофизики``
+\begin{frame}[allowframebreaks]{Current status and outlook}
+\begin{itemize}
+  \item The principal task for the multi-messenger astrophysics is to organize a joint analysis of data collected from different sources;
+  \item A joint Russian-German project of the KRAD is devoted to the investigation of this problem;
+  \item The objectives of the project include:
+  \begin{itemize}
+    \item a data center for astrophysical data;
+    \item software environment for the distributed analysis of this data;
+    \item open access to this data for everyone;
+    \item obtaining new knowledge about the laws of the universe by applying the most modern methods of machine learning to the big data collected;
+  \end{itemize}
+  \framebreak
+  \item By now:
+  \begin{itemize}
+    \item The KASCADE project has a data center called KCDC, that is planned to serve as the basis for the future common center for data access;
+    \item The differences in the data formats were analyzed and solutions for organizing storage and distributed data processing were proposed;
+    \item A scheme of a relational database for the future data center is designed using a metadata-based approach;
+  \end{itemize}
+  \item The possibilities to apply the results of the project to educational and oureach activities are being explored; at present:
+  \begin{itemize}
+    \item KIT students use the KCDC for classes;
+    \item The joint resource astroparticle.online is created to provide access to KASCADE and TAIGA data;
+    \item astroparticle.online is used by students of the Irkutsk State University in the course ``The fundamentals of modern astrophysics''
+  \end{itemize}
+\end{itemize}
 % \begin{block}{And what has already been done so far?}
 %   \begin{itemize}
 %     \item KCDC general scheme
@@ -247,10 +275,6 @@ The common conclusion: distributed computing could be useful
 %   \end{itemize}
 % \end{block}
 \end{frame}
-
-% \begin{frame}{TODO}
-% \textcolor{red}{What else is missing?}
-% \end{frame}
 
 \begin{frame}{}
 \Huge
