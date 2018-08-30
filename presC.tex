@@ -4,7 +4,7 @@
 
 \title[Cosmic rays data center]{Current status of data center for cosmic rays \\based on KCDC}
 \subtitle{GRID-2018, Dubna}
-\author{Dmitriy Kostunin, Victoria Tokareva}
+\author{\underline{Victoria Tokareva}, Dmitriy Kostunin}
 
 \institute{Institute for Nuclear Physics (IKP)}
 
@@ -39,7 +39,7 @@
 
 \vspace{-1.5em}
 \begin{center}
-\includegraphics[width=0.82\textwidth]{pics/proj_objectives.png}
+\includegraphics[width=0.82\textwidth]{pics/proj_objectives.pdf}
 \end{center}
 
 %proj_objectives.png
@@ -69,7 +69,7 @@
   \begin{block}{Common}
     \begin{itemize}
       \item Metadata format (e.g.\ time, location, atmospheric conditions)
-      \item Software for EAS simulation (e.g. KORSIKA)
+      \item Software for EAS simulation (e.g. CORSIKA)
       \item Shower parameters
       \item Theoretical models
     \end{itemize}
@@ -97,7 +97,7 @@
 \end{minipage}
 \end{frame}
 
-\begin{frame}{WMS~--- workload management system}
+\begin{frame}{WMS---workload management system}
 % \textcolor{red}{\textit{Taken from Petrosyan's talk}}
 \begin{itemize}
   \item The basic idea is to provide a central queue for all users and make all the distributed sites look like local ones;
@@ -148,68 +148,6 @@ What data do we work with?
   \end{itemize}
 \end{itemize}
 }
-% \begin{columns}
-% \begin{column}{0.5\textwidth}
-% Data types:
-%   \begin{itemize}
-%     \item Raw detector readouts;
-%     \item Pre-analyzed events;
-%     \item Metadata
-%   \end{itemize}
-% \end{column}
-% \begin{column}{0.5\textwidth}  %%<--- here
-%  Data structure:
-%   \begin{itemize}
-%     \item Different formats;
-%     \item Different messengers;
-%     \item Common metadata
-%   \end{itemize}
-% \end{column}
-% \end{columns}
-
-% \begin{tabular}{|c|c|} \hline
-% Data types & Data structure \\ \hline
-% \begin{itemize}
-%  \item r1 &  \item r2 \\
-%  \item r3 &  \item r4 \\ \hline
-%   \end{itemize}
-% \end{tabular}
-
-
-% \vspace{2em}
-% \begin{minipage}[t]{0.4\textwidth}
-% Data types:
-%   \begin{itemize}
-%     \item Raw detector readouts;
-%     \item Pre-analyzed events;
-%     \item Metadata;
-%   \end{itemize}
-% \end{minipage}
-% \hfill
-% \begin{minipage}[t]{0.4\textwidth}
-%  Data structure:
-%   \begin{itemize}
-%     \item Different formats;
-%     \item Different messengers;
-%     \item Common metadata;
-%   \end{itemize}
-% \end{minipage}
-
-
-% \begin{itemize}
-%   \item Data types:
-%   \begin{itemize}
-%     \item Raw detector readouts;
-%     \item Pre-analyzed events;
-%     \item Metadata;
-%   \end{itemize}
-%   \item Data structure:
-%   \begin{itemize}
-%     \item Different formats;
-%     \item Different messengers;
-%     \item Common metadata;
-%   \end{itemize}
-% \end{itemize}
 
 Our approach:
 \begin{itemize}
@@ -272,7 +210,7 @@ Our approach:
 \begin{tabular*}{1\textwidth}{c@{~~~$\Rightarrow$~~~}c}
 \multicolumn{1}{c}{\textbf{Feature}} &
 \multicolumn{1}{c}{\textbf{Consequence}} \\ \hline
-\cellbox{The software for EAS simulation (e.g.\ KORSIKA) does not depend on a particular experiment} &
+\cellbox{The software for EAS simulation (e.g.\ CORSIKA) does not depend on a particular experiment} &
 \cellbox{Simulations require standartized system environment} \\
 \cellbox{
   Simulations require small amounts of input data
@@ -293,7 +231,7 @@ Our approach:
 \vspace{-1em}
 \begin{center}
 % \includegraphics[width=0.85\textwidth]{pics/KCDC_workflow_f1.png}
-\includegraphics[width=0.85\textwidth]{pics/kcdc_scheme_k.png}
+\includegraphics[width=0.85\textwidth]{pics/kcdc_scheme_k.pdf}
 \end{center}
 \end{frame}
 
