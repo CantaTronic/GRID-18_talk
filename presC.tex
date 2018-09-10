@@ -5,7 +5,8 @@
 
 \title[Cosmic rays data center]{Current status of data center for cosmic rays \\based on KCDC}
 \subtitle{GRID-2018, Dubna}
-\author{\underline{Victoria Tokareva}, Dmitriy Kostunin}
+\author{\underline{Victoria Tokareva}, Dmitriy Kostunin, Andreas Haungs\\for the German-Russain Astroparticle Data Life Cycle Group}
+% \subtitle{test}
 
 \institute{Institute for Nuclear Physics (IKP)}
 
@@ -15,7 +16,7 @@
 
 \usepackage[citestyle=authoryear,bibstyle=numeric,hyperref,backend=biber]{biblatex}
 \addbibresource{templates/example.bib}
-\bibhang1em
+\bibhang1em\\for the German-Russain Astroparticle Data Life Cycle Group
 
 \newcommand{\itemarrow}{\scriptsize\raise1.25pt\hbox{\textcolor{kit-green100}{$\blacktriangleright$}}}
 \newcommand{\concl}[1]{\item[\itemarrow]\textcolor{kit-green100}{#1}}
@@ -58,7 +59,7 @@
 % \end{itemize}
 \end{frame}
 
-\begin{frame}{Deep into KASCADE and Tunka data formats}
+\begin{frame}{Deep into KASCADE-Grande and Tunka data formats}
 \vspace{-2em}
 \begin{minipage}[t]{0.48\textwidth}
   \begin{block}{Different}
@@ -68,6 +69,7 @@
       \item Dedicated software for analyzing data
       \item Special system environment for the software
     \end{itemize}
+    \vspace{1em}
   \end{block}
 \end{minipage}
 \hfill
@@ -270,13 +272,55 @@ Our approach:
 % %CONCLUSION
 \input{concl.tex}
 
-% \appendix
-% \beginbackup
-%
-% \begin{frame}[allowframebreaks]{References}
-% \printbibliography
-% \end{frame}
-%
-% \backupend
+\appendix
+\beginbackup
+
+\begin{frame}
+% [allowframebreaks]
+{The German-Russain Astroparticle Data Life Cycle collaboration}
+    \begin{itemize}
+	\item \textbf{\textcolor{kit-green100}{TAIGA}} - \textbf{\textcolor{kit-green100}{T}}unka \textbf{\textcolor{kit-green100}{A}}dvanced 
+	\textbf{\textcolor{kit-blue70}{I}}nstrument for cosmic ray physics and \textbf{\textcolor{kit-green100}{G}}amma 
+	\textbf{\textcolor{kit-green100}{A}}stronomy (see \textbf{\textcolor{kit-green100}{
+% 	https://
+	taiga-experiment.info}});
+	\item KASCADE-Grande -- \textbf{\textcolor{kit-green100}{KA}}rlsruhe \textbf{\textcolor{kit-green100}{S}}hower 
+	\textbf{\textcolor{kit-green100}{C}}ore and \textbf{\textcolor{kit-green100}{A}}rray \textbf{\textcolor{kit-green100}{DE}}tector 
+	- \textbf{\textcolor{kit-orange70}{Grande}} 
+	(see \textbf{\textcolor{kit-green100}{
+% 	http://
+	www-ik.fzk.de/KASCADE\_home.html}});
+	\item KIT-IKP - Institute for Nuclear Physics Karlsruhe Institute of Technology
+	\item SCC - Steinbuch Centre for Computing Karlsruhe Institute of Technology
+	\item SINP MSU - Skobeltsyn Institute Of Nuclear Physics Lomonosov Moscow State University
+	\item ISU -- Irkutsk State University
+	\item ISDCT -- Matrosov Institute for System Dynamics and Control Theory
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{The German-Russain Astroparticle Data Life Cycle Initiative}
+ \vspace{-2em}
+\begin{minipage}[t]{0.41\textwidth}
+%   \begin{block}{\small Tunka-133}
+    \parbox[c][0.20\textheight][t]{1\textwidth}{
+      \centering
+      \includegraphics[width=0.7742\textwidth]{pics/ikp-0.pdf}
+    }
+%     \hfill
+\vspace{-2em}
+    \parbox[c][0.15\textheight][t]{1\textwidth}{
+      \begin{itemize}
+        \setlength{\itemsep}{0pt}
+        \item 133 photomultipliers
+        \item measures EAS Cherenkov light
+      \end{itemize}
+    }
+%   \end{block}
+\end{minipage}
+\hfill
+\end{frame}
+
+
+\backupend
 
 \end{document}

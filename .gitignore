@@ -10,3 +10,9 @@
 *.xml
 *.synctex.gz
 *.kate-swp
+*.backup
+*.odt
+*.xcf
+*eps-converted-to.pdf
+
+
