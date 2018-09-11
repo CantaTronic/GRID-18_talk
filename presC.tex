@@ -6,7 +6,7 @@
 \title[Cosmic rays data center based on KCDC]{Current status of data center for cosmic rays \\based on KCDC}
 \subtitle{GRID-2018, Dubna}
 \author[\underline{Victoria Tokareva}, Dmitriy Kostunin, Andreas Haungs]{
-  \underline{Victoria Tokareva}, Dmitriy Kostunin, Andreas Haungs~\textbar~September 12, 2018
+  \underline{Victoria Tokareva}, Dmitriy Kostunin, Andreas Haungs~\textbar~September 14, 2018
   \\ \textit{for the German-Russian Astroparticle Data Life Cycle Group}
 }
 % \subtitle{test}
@@ -197,7 +197,7 @@ Our approach:
 \begin{frame}{Proposed cosmic-ray metadata structure}
 \vspace{-1.5em}
 \begin{center}
-\includegraphics[width=0.82\textwidth]{pics/metadata.eps}
+\includegraphics[width=0.82\textwidth]{pics/metadata.pdf}
 \end{center}
 \end{frame}
 
@@ -206,12 +206,14 @@ Our approach:
   \item Software for data analysis depends on a particular experiment
   \begin{itemize}
     \item Problem: It may even require dedicated system environment
-    \concl{Solution: Virtualization could be useful}
+    \concl{\textbf{Solution: Virtualization}}
+%     could be useful}
   \end{itemize}
   \item Data analysis requires huge amounts of input data
   \begin{itemize}
     \item Problem: It is often more optimal to perform it on the same site the data are stored
-    \concl{Solution: Job management could handle the task}
+    \concl{\textbf{Solution: Job management}}
+%     could handle the task}
   \end{itemize}
 \end{itemize}
 \end{frame}
