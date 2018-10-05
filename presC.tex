@@ -21,12 +21,29 @@
 \addbibresource{templates/example.bib}
 \bibhang1em
 
+\setbeamercovered{invisible}
+\usepackage{tikz}
 \newcommand{\itemarrow}{\scriptsize\raise1.25pt\hbox{\textcolor{kit-green100}{$\blacktriangleright$}}}
 \newcommand{\concl}[1]{\item[\itemarrow]\textcolor{kit-green100}{#1}}
+\renewcommand{\emph}[1]{\textcolor{kit-green100}{\textbf{#1}}}
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 \newlength{\cellwidth}
 \setlength{\cellwidth}{0.43\textwidth}
 \newcommand{\cellbox}[1]{\parbox{\cellwidth}{\vspace{1ex}#1\vspace{1ex}}}
+\newcommand{\insimg}[1]{
+\begin{tikzpicture}[remember picture,overlay]
+  \node[xshift=-7.7ex,yshift=12ex] at (current page.south east){%
+    \includegraphics[width=14ex]{pics/#1}
+  };
+\end{tikzpicture}
+%   \setlength\unitlength{1ex}%
+%   \begin{picture}(0,0)(#2,#3) 
+%     % \put{} defines the position of the frame
+%     \put(0,0){\makebox(0,0)[cc]{
+%       \includegraphics[width=#4]{pics/#1}
+%     }}%
+%   \end{picture}
+}
 
 \begin{document}
 
@@ -39,18 +56,26 @@
 \section{Data life cycle}
 
 \begin{frame}{Data life cycle scheme}
-\Huge Here be the data life cycle wheel.
+\centering
+\includegraphics[width=0.6\textwidth]{pics/ADLC.pdf}
 \end{frame}
 
 \subsection{Archiving and storage}
 
 \begin{frame}{Archiving and storage}
-\begin{itemize}
-\item Bad way / good way;
-\item Distributed storage as a solution on top of existing servers (see Nguen);
-\item Acquisition by metadata;
-\item What is metadata?
-\end{itemize}
+\centering
+\only<1>{\includegraphics[width=1\textwidth]{pics/data_workflow_0.pdf}}
+\only<2>{\includegraphics[width=1\textwidth]{pics/data_workflow_1.pdf}}
+\only<3>{\includegraphics[width=0.99\textwidth]{pics/data_workflow_2.pdf}}
+\only<4>{\includegraphics[width=0.99\textwidth]{pics/data_workflow_3.pdf}}
+\only<5>{\includegraphics[width=0.62\textwidth]{pics/data_workflow_4.pdf}}
+% \begin{itemize}
+% \item Bad way / good way;
+% \item Distributed storage as a solution on top of existing servers (see Nguen);
+% \item Acquisition by metadata;
+% \item What is metadata?
+% \end{itemize}
+\insimg{ADLC0.pdf}
 \end{frame}
 
 \begin{frame}{Proposed cosmic-ray metadata structure}
@@ -58,14 +83,17 @@
 \begin{center}
 \includegraphics[width=0.82\textwidth]{pics/metadata.pdf}
 \end{center}
+\insimg{ADLC0.pdf}
 \end{frame}
 
 \subsection{Simulation and analysis}
 
 \begin{frame}{Data analysis workflow}
+\vspace{-2em}
 \centering
-\includegraphics[height=0.7\textheight]{pics/KASCADE-Workflow.png}\\
-\textcolor{red}{To be redrawn!}
+\only<1>{\includegraphics[width=1\textwidth]{pics/KRAD_workflow_curr.pdf}}
+\only<2>{\includegraphics[width=1\textwidth]{pics/KRAD_workflow_hori.pdf}}
+\insimg{ADLC1.pdf}
 \end{frame}
 
 \begin{frame}{Simulation}
@@ -85,6 +113,7 @@
   \end{itemize}
 \end{enumerate}
 \end{block}
+\insimg{ADLC1.pdf}
 \end{frame}
 
 \begin{frame}{Analysis}
@@ -101,25 +130,27 @@
 
 \begin{itemize}
 \item Analysis could be either algorithmic or machine learning;
-\item Machine learning requires large enough statistics in order to work properly.
+\item Machine learning requires large enough statistics\\in order to work properly.
 \end{itemize}
+\insimg{ADLC1.pdf}
 \end{frame}
 
 \begin{frame}{Analysis features}
-\begin{itemize}
-  \item Software for data analysis depends on a particular experiment
+\vspace{-3em}
+\begin{block}{Software for data analysis depends on a particular experiment}
   \begin{itemize}
     \item Problem: It may even require dedicated system environment
-    \concl{\textbf{Solution: Virtualization}}
-%     could be useful}
+    \item \textbf{Solution: Virtualization}
   \end{itemize}
-  \item Data analysis requires huge amounts of input data
+\end{block}
+
+\begin{block}{Data analysis requires huge amounts of input data}
   \begin{itemize}
     \item Problem: It is often more optimal to perform it on the same site the data are stored
-    \concl{\textbf{Solution: Job management}}
-%     could handle the task}
+    \item \textbf{Solution: Job management}
   \end{itemize}
-\end{itemize}
+\end{block}
+\insimg{ADLC1.pdf}
 \end{frame}
 
 \begin{frame}{WMS---workload management system}
@@ -137,32 +168,40 @@
 %     \item WMS interacts with middleware, users see only high level workflow
 %     \item Automation engines built in WMS, not exposed to users
 %   \end{itemize}
-  \item Provide the common way to issue tasks to different types of the distibuted sites;
+  \item Provide the common way to issue tasks to different\\types of the distibuted sites;
   \item
 %   Use the same system for simulation, data processing and users analysis
-  The same system for the data access, analysis and simulation.
+  The same system for the data access, analysis and\\simulation.
 %   \item Similar ideas have been implemented in several independent systems developed by LHC experiments: AliEn, Dirac, PanDA
 \end{itemize}
+\insimg{ADLC1.pdf}
 \end{frame}
 
 \begin{frame}{WMS diversity}
-\Huge
-Here be a cloud with various WMS's.
+\begin{center}
+\fbox{
+  \parbox[c][0.4\textheight]{0.8\textwidth}{
+    \Huge\centering
+    Here be a cloud\\of various WMS's.
+  }
+}
+\end{center}
 
-\normalsize
-My task is to develop and deploy distributed execution for simulation and analysis jobs.
+My task is to develop and deploy distributed execution\\for simulation and analysis jobs.
+\insimg{ADLC1.pdf}
 \end{frame}
 
 \subsection{Open access and education}
 
 \begin{frame}{Open access and education}
+\vspace{-4em}
 \begin{itemize}
-\item Open access: dedicated portal;
+\item Open access: a dedicated portal planned;
 \item Education: \textcolor{blue}{\texttt{astroparticle.online}}.
 \end{itemize}
-\begin{center}
-  \includegraphics[width=0.9\textwidth]{pics/astro_onl.png}
-\end{center}
+\centering
+\includegraphics[width=0.85\textwidth]{pics/astro_onl.png}
+\insimg{ADLC2.pdf}
 \end{frame}
 
 % % \section{The project objectives}

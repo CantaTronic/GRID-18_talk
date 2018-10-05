@@ -41,21 +41,22 @@
 %   \\http://www.appec.org/wp-content/uploads/Documents/Docs-from-old-site/AModelForComputing-2.pdf}
 \end{frame}
 
-\begin{frame}
-% {Data lifa cycle and information management}
- \vspace{-1em}
+\begin{frame}{Data life cycle}% and information management
+%  \vspace{-1em}
 % \textcolor{red!50!black}{Change the collboration picture}
-\begin{center}
-  \includegraphics[width=0.82\textwidth]{pics/data_lifecycle_illust.jpg}
-\end{center}
-\small
-\vspace{-2em}
+\vspace{-1ex}
+\centering
+\includegraphics[width=0.8\textwidth]{pics/data_lifecycle_illust.jpg}
+% \small
+\vspace{-1ex}
 \begin{itemize}
-\item Experiments are getting more advanced and measuring events with greater precision;
-\item But we cannot control the number of incoming particles;
-\item $=>$ a lot of data, not too many events $=>$ combined analysis of data from different experiments becomes topical;
+\setlength{\itemsep}{0pt}
+\item<2-> Experiments improve and are measuring events with greater precision;
+\item<3-> But we cannot control the number of incoming particles;
+\item[]<4-> $\Rightarrow$ a lot of data, not too many events;
+\item[]<5-> $\Rightarrow$ combined analysis of data from different experiments becomes topical;
 % \item Data life cycle needs to be developed;
-\item  Astronomical Virtual Observatories (Auger \& IceCube data).
+\item<6-> Astronomical Virtual Observatories (Auger \& IceCube data).
 \end{itemize}
 
 \end{frame}
@@ -117,10 +118,15 @@
 % \textcolor{red!50!black}{Add the kcdc logo in the center of the slide}
 \end{itemize}
 
-\parbox[t][0pt]{0pt}{
-  \vspace{-0.63\textheight}
-  ~\hspace{0.68\textwidth}\includegraphics[width=0.3\textwidth]{pics/KCDC-Logo.png}
-}
+\begin{tikzpicture}[remember picture,overlay]
+  \node[xshift=-12ex,yshift=-21ex] at (current page.north east){%
+    \includegraphics[width=0.3\textwidth]{pics/KCDC-Logo.png}
+  };
+\end{tikzpicture}
+% \parbox[t][0pt]{0pt}{
+%   \vspace{-0.63\textheight}
+%   ~\hspace{0.68\textwidth}\includegraphics[width=0.3\textwidth]{pics/KCDC-Logo.png}
+% }
 \end{frame}
 
 \begin{frame}{TAIGA}
