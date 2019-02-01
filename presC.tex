@@ -3,13 +3,18 @@
 \titlelogo{empty_logo}
 \titleimage{KASCADE-img}
 
-\title[Cosmic rays data center based on KCDC]{Data integration for various astroparticle data in German-Russian Astroparticle Data Life Cycle project}
-\subtitle{Astroparticle school 2018, Obertrubach}
+\title[Data engineering for astroparticle physics]{Data engineering for joint analysis of different astroparticle data in KRAD project}
+\subtitle{Big Data Science in Astroparticle Research, Aachen University}
 \author[Victoria Tokareva]{
-  Victoria Tokareva~\textbar~October 6, 2018
+  Victoria Tokareva~\textbar~18-20 February 2019
 %   \\ \textit{for the German-Russian Astroparticle Data Life Cycle Group}
 }
 % \subtitle{test}
+
+%
+% Big Data Science in Astroparticle Research - Workshop
+% 18-20 February 2019
+% RWTH Aachen University SuperC
 
 \institute{Institute for Nuclear Physics (IKP)}
 
@@ -38,7 +43,7 @@
   };
 \end{tikzpicture}
 %   \setlength\unitlength{1ex}%
-%   \begin{picture}(0,0)(#2,#3) 
+%   \begin{picture}(0,0)(#2,#3)
 %     % \put{} defines the position of the frame
 %     \put(0,0){\makebox(0,0)[cc]{
 %       \includegraphics[width=#4]{pics/#1}
@@ -154,8 +159,8 @@
   \end{itemize}
 \end{block}
 \insimg{ADLC1.pdf}
-  \footnotesize\footnotetext[2]{``The act of creating a virtual (rather than actual) 
-  version of something,\\ \hspace{1.5em}including virtual computer hardware platforms, 
+  \footnotesize\footnotetext[2]{``The act of creating a virtual (rather than actual)
+  version of something,\\ \hspace{1.5em}including virtual computer hardware platforms,
   storage devices,\\ \hspace{1.5em}and computer network resources''. $\copyright$ Wikipedia}
 \end{frame}
 
@@ -221,18 +226,18 @@
 
 % % \section{The project objectives}
 % \section{The data integration approach}
-% 
+%
 % \begin{frame}{The project objectives}
 % % Work packages:
-% 
+%
 % \vspace{-1em}
 % \begin{center}
 % \includegraphics[width=0.82\textwidth]{pics/proj_objectives.pdf}
 % \end{center}
-% 
+%
 % %   \item Minh Duc Nguyen, \textit{A distributed data warehouse system for astroparticle physics}, GRID2018 session 10
 % %   \item Yu. Kazarina, \textit{Application of Hubzero platform for the educational process in astroparticle physics}, GRID2018 poster
-% 
+%
 % \footnotesize\footnotetext[2]{Minh Duc Nguyen, \textit{A distributed data warehouse system for astroparticle physics}, GRID2018 session 10}
 % \footnotesize\footnotetext[3]{Yu. Kazarina, \textit{Application of Hubzero platform for the educational process in astroparticle physics}, GRID2018 poster}
 % %proj_objectives.png
@@ -244,7 +249,7 @@
 % %  \item Go for the public ( astroparticle.online )
 % % \end{itemize}
 % \end{frame}
-% 
+%
 % \begin{frame}{Deep into KASCADE-Grande and Tunka data formats}
 % \vspace{-2em}
 % \begin{minipage}[t]{0.48\textwidth}
@@ -269,11 +274,11 @@
 %     \end{itemize}
 %   \end{block}
 % \end{minipage}
-% 
+%
 % %  \begin{exampleblock}{title}
 % %   text
 % %  \end{exampleblock}
-% 
+%
 % \begin{minipage}[t]{0.48\textwidth}
 %   \begin{exampleblock}{Current state}
 %     \begin{itemize}
@@ -290,13 +295,13 @@
 %   \end{exampleblock}
 % \end{minipage}
 % \end{frame}
-% 
+%
 % \begin{frame}{Data-oriented approach}
 % % \vspace{-1em}
 % What data do we work with?
-% 
+%
 % % \vspace{3em}
-% 
+%
 % \parbox{0.48\textwidth}{
 % \begin{itemize}
 %   \item Data types:
@@ -318,14 +323,14 @@
 %   \end{itemize}
 % \end{itemize}
 % }
-% 
+%
 % Our approach:
 % \begin{itemize}
 %  \item It is proposed to store unique event id and metadata in the unified database
 %  \item With growing data sizes, distribured storage for events could be useful
 % \end{itemize}
 % \end{frame}
-% 
+%
 % % \begin{tabular*}{1\textwidth}{p{0.45\textwidth}@{\extracolsep{\fill}}p{0.45\textwidth}}
 % % \hline\multicolumn{2}{c}{Location} \\
 % % % Experiments: remote locations with no or limited internet access &
@@ -341,7 +346,7 @@
 % % With growing data sizes, distribured storage for events could be useful \\
 % % \hline
 % % \end{tabular*}
-% 
+%
 % % \begin{frame}{Data storage}
 % % \begin{itemize}
 % %   \item Some experiments (in our case, TUNKA) are situated at remote locations with no or limited internet access, raw data are transferred periodically to servers on tapes or disks
@@ -352,7 +357,7 @@
 % %   \item With growing data sizes, distribured storage for events could be useful
 % % \end{itemize}
 % % \end{frame}
-% 
+%
 % \begin{frame}{Simulation}
 % \centering
 % \begin{tabular*}{1\textwidth}{c@{~~~$\Rightarrow$~~~}c}
@@ -362,18 +367,18 @@
 % \cellbox{Simulations require standartized system environment} \\
 % \cellbox{
 %   Simulations require small amounts of input data
-% 
+%
 %   Simulations can be done independently for different events
 % } &
 % \cellbox{Simulations are easily scalable} \\
 % \cellbox{Simulations require a lot of computing resources} &
 % \cellbox{HPC sites are needed} \\ \hline
 % \end{tabular*}
-% 
+%
 % \vspace{1ex}
 % \centering\textbf{\textcolor{kit-green100}{Distributed computing could be useful}} \\
 % \end{frame}
-% 
+%
 % \begin{frame}{Distributed analysis and simulation scheme}
 % % \textcolor{red}{Схема~--- проверить!)}
 % \vspace{-1em}
