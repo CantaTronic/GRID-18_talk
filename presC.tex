@@ -49,45 +49,45 @@
 
 \section{Data life cycle}
 
-\begin{frame}{Data life cycle scheme}
-\centering
-\includegraphics[width=0.6\textwidth]{pics/ADLC.pdf}
-\end{frame}
+% \begin{frame}{Data life cycle scheme}
+% \centering
+% \includegraphics[width=0.6\textwidth]{pics/ADLC.pdf}
+% \end{frame}
 
-\subsection{Archiving and storage}
-
-\begin{frame}{Archiving and storage}
-\centering
-\only<1>{\includegraphics[width=1\textwidth]{pics/data_workflow_0.pdf}}
-\only<2>{\includegraphics[width=1\textwidth]{pics/data_workflow_1.pdf}}
-\only<3>{\includegraphics[width=0.99\textwidth]{pics/data_workflow_2.pdf}}
-\only<4>{\includegraphics[width=0.99\textwidth]{pics/data_workflow_3.pdf}}
-\only<5>{\includegraphics[width=0.62\textwidth]{pics/data_workflow_4.pdf}}
-% \begin{itemize}
-% \item Bad way / good way;
-% \item Distributed storage as a solution on top of existing servers (see Nguen);
-% \item Acquisition by metadata;
-% \item What is metadata?
-% \end{itemize}
-\insimg{ADLC0.pdf}
-\end{frame}
+% \subsection{Archiving and storage}
+%
+% \begin{frame}{Archiving and storage}
+% \centering
+% \only<1>{\includegraphics[width=1\textwidth]{pics/data_workflow_0.pdf}}
+% \only<2>{\includegraphics[width=1\textwidth]{pics/data_workflow_1.pdf}}
+% \only<3>{\includegraphics[width=0.99\textwidth]{pics/data_workflow_2.pdf}}
+% \only<4>{\includegraphics[width=0.99\textwidth]{pics/data_workflow_3.pdf}}
+% \only<5>{\includegraphics[width=0.62\textwidth]{pics/data_workflow_4.pdf}}
+% % \begin{itemize}
+% % \item Bad way / good way;
+% % \item Distributed storage as a solution on top of existing servers (see Nguen);
+% % \item Acquisition by metadata;
+% % \item What is metadata?
+% % \end{itemize}
+% \insimg{ADLC0.pdf}
+% \end{frame}
 
 \begin{frame}{Proposed cosmic-ray metadata structure}
 \vspace{-1.5em}
 \begin{center}
 \includegraphics[width=0.82\textwidth]{pics/metadata.pdf}
 \end{center}
-\insimg{ADLC0.pdf}
+% % \insimg{ADLC0.pdf}
 \end{frame}
 
-\subsection{Simulation and analysis}
+% \subsection{Simulation and analysis}
 
 \begin{frame}{Data workflow}
 \vspace{-2em}
 \centering
 \only<1>{\includegraphics[width=1\textwidth]{pics/KRAD_workflow_curr.pdf}}
 \only<2>{\includegraphics[width=1\textwidth]{pics/KRAD_workflow_hori.pdf}}
-\insimg{ADLC1.pdf}
+% \insimg{ADLC1.pdf}
 \end{frame}
 
 \begin{frame}{Simulation}
@@ -107,97 +107,40 @@
   \end{itemize}
 \end{enumerate}
 \end{block}
-\insimg{ADLC1.pdf}
+% \insimg{ADLC1.pdf}
 \end{frame}
 
 \begin{frame}{Analysis}
-% \begin{block}{Steps}
-% \begin{itemize}
-% \item Event building;
-% \item Data calibration and correction;
-% \item Preliminary reconstruction of shower variables;
-% \item Data mapping and scaling;
-% \item Final reconstruction;
-% \item Joint data analysis.
-% \end{itemize}
-% \end{block}
-\includegraphics[width=1\textwidth]{pics/an_steps.pdf}
-\vspace{2em}
-
-\begin{itemize}
-\item Analysis could be either algorithmic or machine learning;
-\item Machine learning requires large enough statistics\\in order to work properly.
-\end{itemize}
-\insimg{ADLC1.pdf}
+    \includegraphics[width=1\textwidth]{pics/an_steps.pdf}
+    \vspace{2em}
+    \begin{itemize}
+        \item Analysis could be either algorithmic or machine learning;
+        \item Machine learning requires large enough statistics\\in order to work properly.
+    \end{itemize}
+%     \insimg{ADLC1.pdf}
 \end{frame}
 
-\begin{frame}{Analysis features}
-\vspace{-3em}
-\begin{block}{Software for data analysis depends on a particular experiment}
-  \begin{itemize}
-    \item Problem: It may even require dedicated system environment
-    \item \textbf{Solution: Virtualization\footnotemark[2]}
-  \end{itemize}
-\end{block}
-
-\begin{block}{Data analysis requires huge amounts of input data}
-  \begin{itemize}
-    \item Problem: It is often more optimal to perform it on the same site the data are stored
-    \item \textbf{Solution: Job management}
-  \end{itemize}
-\end{block}
-\insimg{ADLC1.pdf}
-  \footnotesize\footnotetext[2]{``The act of creating a virtual (rather than actual)
-  version of something,\\ \hspace{1.5em}including virtual computer hardware platforms,
-  storage devices,\\ \hspace{1.5em}and computer network resources''. $\copyright$ Wikipedia}
-\end{frame}
-
-\begin{frame}{WMS---workload management system}
-\begin{itemize}
-  \item The basic idea is to provide a central queue for all users and make all the distributed sites look like local ones;
-  \item Starting from mid 90's are widely used in collider experiments (Dirac, PanDA);
-  \item Dedicated for:
-  \begin{itemize}
-  \item Unified usage of the distributed remote data and common data analysis;
-  \item Conceal various low-level software and provide unified high-level interface;
-  \end{itemize}
-%   \item
-%   Hide middleware while supporting diversity and evolution
+% \begin{frame}{Analysis features}
+% \vspace{-3em}
+% \begin{block}{Software for data analysis depends on a particular experiment}
 %   \begin{itemize}
-%     \item WMS interacts with middleware, users see only high level workflow
-%     \item Automation engines built in WMS, not exposed to users
+%     \item Problem: It may even require dedicated system environment
+%     \item \textbf{Solution: Virtualization\footnotemark[2]}
 %   \end{itemize}
-  \item Provide the common way to issue tasks to different\\types of the distibuted sites;
-  \item
-%   Use the same system for simulation, data processing and users analysis
-  The same system for the data access, analysis and\\simulation.
-%   \item Similar ideas have been implemented in several independent systems developed by LHC experiments: AliEn, Dirac, PanDA
-\end{itemize}
-\insimg{ADLC1.pdf}
-\end{frame}
+% \end{block}
 
-\begin{frame}{WMS for astroparticle data management}
-\begin{itemize}
- \item <2->IceCube ? \onslide<3->{PanDa}
- \item <4-> Auger ? \onslide<5->{DiRAC}
- \item <6-> Other WMS ? \onslide<7->{VCondor, MyCluster, GWPilot, BigJob, ...}
- \vspace{2em}
- \item <8-> \textbf{\textcolor{kit-green100}{APPDC - ?}}
-\end{itemize}
+% \begin{block}{Data analysis requires huge amounts of input data}
+%   \begin{itemize}
+%     \item Problem: It is often more optimal to perform it on the same site the data are stored
+%     \item \textbf{Solution: Job management}
+%   \end{itemize}
+% \end{block}
+% \insimg{ADLC1.pdf}
+%   \footnotesize\footnotetext[2]{``The act of creating a virtual (rather than actual)
+%   version of something,\\ \hspace{1.5em}including virtual computer hardware platforms,
+%   storage devices,\\ \hspace{1.5em}and computer network resources''. $\copyright$ Wikipedia}
+% \end{frame}
 
-% \begin{center}
-% \fbox{
-%   \parbox[c][0.4\textheight]{0.8\textwidth}{
-%     \Huge\centering
-%     Here be a cloud\\of various WMS's.
-%   }
-% }
-% \end{center}
-
-
-% My task is to develop and deploy distributed execution\\for simulation and analysis jobs.
-\insimg{ADLC1.pdf}
-\end{frame}
 
 \subsection{Open access and education}
 
@@ -209,198 +152,8 @@
 \end{itemize}
 \centering
 \includegraphics[width=0.85\textwidth]{pics/astro_onl.png}
-\insimg{ADLC2.pdf}
+% \insimg{ADLC2.pdf}
 \end{frame}
-
-% % \section{The project objectives}
-% \section{The data integration approach}
-%
-% \begin{frame}{The project objectives}
-% % Work packages:
-%
-% \vspace{-1em}
-% \begin{center}
-% \includegraphics[width=0.82\textwidth]{pics/proj_objectives.pdf}
-% \end{center}
-%
-% %   \item Minh Duc Nguyen, \textit{A distributed data warehouse system for astroparticle physics}, GRID2018 session 10
-% %   \item Yu. Kazarina, \textit{Application of Hubzero platform for the educational process in astroparticle physics}, GRID2018 poster
-%
-% \footnotesize\footnotetext[2]{Minh Duc Nguyen, \textit{A distributed data warehouse system for astroparticle physics}, GRID2018 session 10}
-% \footnotesize\footnotetext[3]{Yu. Kazarina, \textit{Application of Hubzero platform for the educational process in astroparticle physics}, GRID2018 poster}
-% %proj_objectives.png
-% % \textcolor{red}{Add the 'data flow' scheme!!!}
-% % \begin{itemize}
-% %  \item Astroparticle data center (based on KCDC)
-% %  \item Software for big data processing (“Data Life Cycle Lab”)
-% %  \item Multimessenger data analysis and mapping
-% %  \item Go for the public ( astroparticle.online )
-% % \end{itemize}
-% \end{frame}
-%
-% \begin{frame}{Deep into KASCADE-Grande and Tunka data formats}
-% \vspace{-2em}
-% \begin{minipage}[t]{0.48\textwidth}
-%   \begin{block}{Different}
-%     \begin{itemize}
-%       \item Data format (depends on avalilable detectors)
-% %         \item Information on detector properties (e.g.\ calibrations)
-%       \item Dedicated software for analyzing data
-%       \item Special system environment for the software
-%     \end{itemize}
-%     \vspace{1em}
-%   \end{block}
-% \end{minipage}
-% \hfill
-% \begin{minipage}[t]{0.48\textwidth}
-%   \begin{block}{Common}
-%     \begin{itemize}
-%       \item Metadata format (e.g.\ time, location, atmospheric conditions)
-%       \item Software for EAS simulation (e.g. CORSIKA)
-%       \item Shower parameters
-%       \item Theoretical models
-%     \end{itemize}
-%   \end{block}
-% \end{minipage}
-%
-% %  \begin{exampleblock}{title}
-% %   text
-% %  \end{exampleblock}
-%
-% \begin{minipage}[t]{0.48\textwidth}
-%   \begin{exampleblock}{Current state}
-%     \begin{itemize}
-%       \item Separate APIs and UIs for different experiments
-%     \end{itemize}
-%   \end{exampleblock}
-% \end{minipage}
-% \hfill
-% \begin{minipage}[t]{0.48\textwidth}
-%   \begin{exampleblock}{Our objective}
-%     \begin{itemize}
-%       \item Unified API and UIs for different experiments
-%     \end{itemize}
-%   \end{exampleblock}
-% \end{minipage}
-% \end{frame}
-%
-% \begin{frame}{Data-oriented approach}
-% % \vspace{-1em}
-% What data do we work with?
-%
-% % \vspace{3em}
-%
-% \parbox{0.48\textwidth}{
-% \begin{itemize}
-%   \item Data types:
-%   \begin{itemize}
-%     \item Raw detector readouts;
-%     \item Pre-analyzed events;
-%     \item Metadata
-%   \end{itemize}
-% \end{itemize}
-% }
-% \hfill
-% \parbox{0.48\textwidth}{
-% \begin{itemize}
-%   \item Data structure:
-%   \begin{itemize}
-%     \item Different formats;
-%     \item Different messengers;
-%     \item Common metadata
-%   \end{itemize}
-% \end{itemize}
-% }
-%
-% Our approach:
-% \begin{itemize}
-%  \item It is proposed to store unique event id and metadata in the unified database
-%  \item With growing data sizes, distribured storage for events could be useful
-% \end{itemize}
-% \end{frame}
-%
-% % \begin{tabular*}{1\textwidth}{p{0.45\textwidth}@{\extracolsep{\fill}}p{0.45\textwidth}}
-% % \hline\multicolumn{2}{c}{Location} \\
-% % % Experiments: remote locations with no or limited internet access &
-% % % Servers: data are transferred periodically on tapes or disks \\
-% % % \hline\multicolumn{2}{c}{Data} \\
-% % % Raw detector readouts: analyzed offline, not stored &
-% % % Pre-analyzed events: stored on servers \\
-% % % \hline\multicolumn{2}{c}{Different \& common} \\
-% % % Each experiment has its own detectors and provides its own format of events &
-% % % Events share \emph{common metadata} (e.g.\ time, location, atmospheric conditions) \\
-% % \hline\multicolumn{2}{c}{Storage} \\
-% % It is proposed to store unique event id and metadata in the unified database &
-% % With growing data sizes, distribured storage for events could be useful \\
-% % \hline
-% % \end{tabular*}
-%
-% % \begin{frame}{Data storage}
-% % \begin{itemize}
-% %   \item Some experiments (in our case, TUNKA) are situated at remote locations with no or limited internet access, raw data are transferred periodically to servers on tapes or disks
-% %   \item Raw data are pre-analyzed, so-called ``direct'' observables ($e$, $\mu$, $\gamma$, $\hat{C}$, radio, etc.) are obtained, events are stored on servers
-% %   \item Each experiment has its own detectors and provides its own format of events
-% %   \item Events share \emph{common metadata} (e.g.\ time, location, atmospheric conditions)
-% %   \item It is proposed to store unique event id and metadata in the unified database
-% %   \item With growing data sizes, distribured storage for events could be useful
-% % \end{itemize}
-% % \end{frame}
-%
-% \begin{frame}{Simulation}
-% \centering
-% \begin{tabular*}{1\textwidth}{c@{~~~$\Rightarrow$~~~}c}
-% \multicolumn{1}{c}{\textbf{Feature}} &
-% \multicolumn{1}{c}{\textbf{Consequence}} \\ \hline
-% \cellbox{The software for EAS simulation (e.g.\ CORSIKA) does not depend on a particular experiment} &
-% \cellbox{Simulations require standartized system environment} \\
-% \cellbox{
-%   Simulations require small amounts of input data
-%
-%   Simulations can be done independently for different events
-% } &
-% \cellbox{Simulations are easily scalable} \\
-% \cellbox{Simulations require a lot of computing resources} &
-% \cellbox{HPC sites are needed} \\ \hline
-% \end{tabular*}
-%
-% \vspace{1ex}
-% \centering\textbf{\textcolor{kit-green100}{Distributed computing could be useful}} \\
-% \end{frame}
-%
-% \begin{frame}{Distributed analysis and simulation scheme}
-% % \textcolor{red}{Схема~--- проверить!)}
-% \vspace{-1em}
-% \begin{center}
-% % \includegraphics[width=0.85\textwidth]{pics/KCDC_workflow_f1.png}
-% \includegraphics[width=0.85\textwidth]{pics/kcdc_scheme_k.pdf}
-% \end{center}
-% \end{frame}
-
-% \begin{frame}{Mapping of observables between experiments}
-%
-% \textcolor{red}{Draw the sheme of the mapping!!! See the Kostunin's slide \#8}
-%
-% \begin{block}{Draft}
-%   \begin{itemize}
-%     \item Calibrations provided by experiments
-%     \item Various models
-%     \item Implementations are stored
-%   \end{itemize}
-% \end{block}
-% \begin{center}
-%   \includegraphics[width=0.7\textwidth]{pics/k8.pdf}
-% \end{center}
-% \end{frame}
-
-% \begin{frame}{Access}
-% \begin{block}{Draft}
-%   \begin{itemize}
-%     \item Benefits of open access
-%     \item Education and outreach
-%     \item Which infrastructure to use?
-%   \end{itemize}
-% \end{block}
-% \end{frame}
 
 % %CONCLUSION
 \input{concl.tex}
