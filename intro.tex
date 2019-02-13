@@ -9,31 +9,27 @@
 \begin{frame}{Big data in astroparticle physics (APP)}
 %или "Астрофизика - современное состояние"))
 \small
-\vspace{-2em}
-\begin{columns}
-  \begin{column}[t]{0.55\textwidth}
-    \begin{center}
-     \vspace{-1em}
+\begin{minipage}[c]{0.58\textwidth}
+  \begin{center}
 %       \includegraphics[width=1.5\textwidth]{pics/appec_base4.pdf}
-      \includegraphics[width=1.12\textwidth]{pics/appec_computing-diagram.pdf}
-    \end{center}
-    \vspace{-2\parsep}
-    \small Modern astroparticle experiments data rate [Gbytes/day]\footnotemark[1] %, source: APPEC brochure on Computing, 2016}
-  \end{column}
-  \hfill
-  \begin{column}[t]{0.42\textwidth}
-    \begin{itemize}
+      \includegraphics[width=1\textwidth]{pics/appec_computing-diagram.pdf}
+  \end{center}
+  \vspace{-2\parsep}
+  \small Modern astroparticle experiments data rate [Gbytes/day]\footnotemark[1] %, source: APPEC brochure on Computing, 2016}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.41\textwidth}
+  \begin{itemize}
+    \setlength{\itemsep}{0pt}
     \item Wide range of experiments;
     \item More than hundred years of cosmic particle measurements;
     \item Looking at the same sky with different detectors;
-    \item Common data rate for astropartical physics experiments all together is a few PBytes/yeary, which is comparable to the current LHC output\footnotemark[1] % \textcolor{red}{(ссылка на брощюру!!!)}
+    \item Common data rate for astropartical physics experiments all together is a few PBytes/yeary, which is comparable to the current LHC output\footnotemark[1]
     \item Big data for deep learning
-    \end{itemize}
-
+  \end{itemize}
 %     \textcolor{red}{TODO: дописать текста, чтобы сбалансирвоать дизайн страницы}
-  \end{column}
-\end{columns}
-  \footnotesize\footnotetext[1]{Berghöfer T., Agrafioti I. et all. Towards a model for computing in European astroparticle physics, Astroparticle Physics European Coordination committee, 2016\\~}
+\end{minipage}
+\footnotesize\footnotetext[1]{Berghöfer T., Agrafioti I. et all. Towards a model for computing in European astroparticle physics, Astroparticle Physics European Coordination committee, 2016}
 %   \\http://www.appec.org/wp-content/uploads/Documents/Docs-from-old-site/AModelForComputing-2.pdf}
 \end{frame}
 
@@ -49,28 +45,22 @@
 \end{frame}
 
 \begin{frame}{Data engineering in APP}
-
-\begin{columns}
-    \begin{column}[t]{0.45\textwidth}
-    \vspace{-14em}
-        \begin{itemize}
-        \item  Introduction \textcolor{kit-green100}{$\rightarrow$ we are here}
-        \item  GRADLC initiative and main objectives
-        \item  DCL in APP - specific
-        \item  DCL architecture
-        \item  Experiments and data specific
-        \item  Joint analysis scheme
-        \item  Possible solutions
-        \item  Outlook and future work
-        \end{itemize}
-    \end{column}
-
-    \begin{column}[t]{0.45\textwidth}
-        \vspace{-2em}
-        \includegraphics[width=0.95\textwidth]{pics/DE_fun.pdf}
-%     paste a croped picture here
-    \end{column}
-    \end{columns}
+\begin{minipage}[c]{0.46\textwidth}
+  \begin{itemize}
+    \item  Introduction \textcolor{kit-green100}{$\rightarrow$ we are here}
+    \item  GRADLC initiative and main objectives
+    \item  DCL in APP - specific
+    \item  DCL architecture
+    \item  Experiments and data specific
+    \item  Joint analysis scheme
+    \item  Possible solutions
+    \item  Outlook and future work
+  \end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.46\textwidth}
+  \includegraphics[width=1\textwidth]{pics/DE_fun.pdf}
+\end{minipage}
 \end{frame}
 
 \begin{frame}{German-Russian Astroparticle \\Data Life Cycle Initiative\footnotemark[1]}
@@ -218,43 +208,47 @@
 %
 %
 \begin{frame}{The main objectives}
-%      \begin{column}[t]{0.45\textwidth}
-%     \vspace{-14em}
-%         \begin{itemize}
-%         \item  Provide sustainable access to scientific data
-% %         \item  Archiving of Data and Metadata
-% %         \item  Providing analysis tools
-% %         \item  Education in Big Data Science
-% %         \item  Development area for multi-messenger analyses (e.g. Deep Learning)
-% %         \item  Platform for communication and exchange within Astroparticle Physics
-%         \end{itemize}
-%     \end{column}
-%
-%     \begin{column}[t]{0.45\textwidth}
-%         \vspace{-2em}
-% %         \includegraphics[width=0.95\textwidth]{pics/DE_fun.pdf}
-% %     paste a proper picture here
-%     \end{column}
-%     \end{columns}
+\begin{minipage}[c]{0.45\textwidth}
+  \begin{itemize}
+    \item  Provide sustainable access to scientific data
+    \item  Archiving of Data and Metadata
+    \item  Providing analysis tools
+    \item  Education in Big Data Science
+  \end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.54\textwidth}
+  \includegraphics[width=1\textwidth]{pics/proj_objectives.pdf}
+\end{minipage}
+  \vspace{-\topsep}
+  \vspace{-\partopsep}
+  \vspace{\itemsep}
+  \vspace{\parsep}
+  \begin{itemize}
+    \item  Development area for multi-messenger analyses (e.g. Deep Learning)
+    \item  Platform for communication and exchange within Astroparticle Physics
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{DLC in APP specifics}
-%      \begin{column}[t]{0.45\textwidth}
-%     \vspace{-14em}
-%         \begin{itemize}
-%   \item  constantly growing precission and data amounts;
-%   \item rare events and low statistics;
-%   \item call for multi-messenger astrophysics;
-%   \item  need for various data in analysis;
-%   \item data mining in astroparticle data;
-%   \item Need for advanced storage architectures and smart data selection queries
-%         \end{itemize}
-%     \begin{column}[t]{0.45\textwidth}
-%         \vspace{-2em}
-%         \includegraphics[width=0.95\textwidth]{pics/DE_fun.pdf}
-%     paste a proper picture here
-%     \end{column}
-%     \end{columns}
+\begin{minipage}[c]{0.64\textwidth}
+  \begin{itemize}
+    \item Experiments improve and are measuring events with greater precision (large amount of data);
+    \item But not too many events of our interest;
+    \item[$\Rightarrow$] combined analysis of data from different experiments becomes topical;
+    \item Astronomical Virtual Observatories (Auger \& IceCube data).
+%     \item  constantly growing precission and data amounts;
+%     \item rare events and low statistics;
+%     \item call for multi-messenger astrophysics;
+%     \item  need for various data in analysis;
+%     \item data mining in astroparticle data;
+%     \item Need for advanced storage architectures and smart data selection queries
+  \end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.35\textwidth}
+  \includegraphics[width=1\textwidth]{pics/ADLC.pdf}
+\end{minipage}
 \end{frame}
 
 \begin{frame}{APPDS Architecture}
