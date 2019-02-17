@@ -40,205 +40,27 @@
 }
 
 \begin{document}
-
-% change the following line to "ngerman" for German style date and logos
 \selectlanguage{english}
 
 %INTRODUCTION
 \input{intro.tex}
 
 \section{Data life cycle}
+%DLC IN GENERAL:
+\input{DLCdev.tex}
+% DATA AGGREGATION SERVER:
+\input{DLCagr.tex}
+% APPLICATION SERVER: 
+\input{DLCappl.tex}
 
-% \begin{frame}{Data life cycle scheme}
-% \centering
-% \includegraphics[width=0.6\textwidth]{pics/ADLC.pdf}
-% \end{frame}
-
-% \subsection{Archiving and storage}
-%
-% \begin{frame}{Archiving and storage}
-% \centering
-% \only<1>{\includegraphics[width=1\textwidth]{pics/data_workflow_0.pdf}}
-% \only<2>{\includegraphics[width=1\textwidth]{pics/data_workflow_1.pdf}}
-% \only<3>{\includegraphics[width=0.99\textwidth]{pics/data_workflow_2.pdf}}
-% \only<4>{\includegraphics[width=0.99\textwidth]{pics/data_workflow_3.pdf}}
-% \only<5>{\includegraphics[width=0.62\textwidth]{pics/data_workflow_4.pdf}}
-% % \begin{itemize}
-% % \item Bad way / good way;
-% % \item Distributed storage as a solution on top of existing servers (see Nguen);
-% % \item Acquisition by metadata;
-% % \item What is metadata?
-% % \end{itemize}
-% \insimg{ADLC0.pdf}
-% \end{frame}
-
-\begin{frame}{Proposed cosmic-ray metadata structure}
-\vspace{-1.5em}
-\begin{center}
-\includegraphics[width=0.82\textwidth]{pics/metadata.pdf}
-\end{center}
-% % \insimg{ADLC0.pdf}
-\end{frame}
-
-% \subsection{Simulation and analysis}
-
-\begin{frame}{Data workflow}
-\vspace{-2em}
-\centering
-\only<1>{\includegraphics[width=1\textwidth]{pics/KRAD_workflow_curr.pdf}}
-\only<2>{\includegraphics[width=1\textwidth]{pics/KRAD_workflow_hori.pdf}}
-% \insimg{ADLC1.pdf}
-\end{frame}
-
-% \begin{frame}{Simulation}
-% \begin{block}{Simulation: two steps}
-% \begin{enumerate}
-% \item Simulating EAS:
-%   \begin{itemize}
-%   \item CORSIKA, does not depend on detector features, depends on location ans atmospheric conditions;
-%   \item requires large computing power with a standard environment;
-%   \item a small amount of input data and a large amount of output data;
-%   \end{itemize}
-% \item Simulating detector output:
-%   \begin{itemize}
-%   \item depends on detector features;
-%   \item requires dedicated software and special environment for it;
-%   \item large amount of both input and output data;
-%   \end{itemize}
-% \end{enumerate}
-% \end{block}
-% % \insimg{ADLC1.pdf}
-% \end{frame}
-
-\begin{frame}{Analysis}
-    \includegraphics[width=1\textwidth]{pics/an_steps.pdf}
-    \vspace{2em}
-    \begin{itemize}
-        \item Analysis could be either algorithmic or machine learning;
-        \item Machine learning requires large enough statistics\\in order to work properly.
-    \end{itemize}
-%     \insimg{ADLC1.pdf}
-\end{frame}
-
-% \begin{frame}{Analysis features}
-% \vspace{-3em}
-% \begin{block}{Software for data analysis depends on a particular experiment}
-%   \begin{itemize}
-%     \item Problem: It may even require dedicated system environment
-%     \item \textbf{Solution: Virtualization\footnotemark[2]}
-%   \end{itemize}
-% \end{block}
-
-% \begin{block}{Data analysis requires huge amounts of input data}
-%   \begin{itemize}
-%     \item Problem: It is often more optimal to perform it on the same site the data are stored
-%     \item \textbf{Solution: Job management}
-%   \end{itemize}
-% \end{block}
-% \insimg{ADLC1.pdf}
-%   \footnotesize\footnotetext[2]{``The act of creating a virtual (rather than actual)
-%   version of something,\\ \hspace{1.5em}including virtual computer hardware platforms,
-%   storage devices,\\ \hspace{1.5em}and computer network resources''. $\copyright$ Wikipedia}
-% \end{frame}
-
+%PHYSICS
 \begin{frame}{Example: stacked analysis of high-energetic gamma rays}
- 
-\end{frame}
-
-\begin{frame}{Open access and education}
-\vspace{-4em}
-\begin{itemize}
-\item Open access: a dedicated portal planned;
-\item Education: \textcolor{blue}{\texttt{astroparticle.online}}.
-\end{itemize}
-\centering
-\includegraphics[width=0.85\textwidth]{pics/astro_onl.png}
-% \insimg{ADLC2.pdf}
+ \textcolor{red}{there will be some physics soon!}
 \end{frame}
 
 % %CONCLUSION
 \input{concl.tex}
 
-\appendix
-\beginbackup
-
-\section{Appendix}
-\subsection{Collaboration}
-
-\begin{frame}[allowframebreaks]
-{The German-Russian Astroparticle Data Life Cycle collaboration}
-\parbox{0.35\textwidth}{
-  \centering\includegraphics[width=0.25\textwidth]{pics/taiga.eps}
-}\hfill
-\parbox{0.60\textwidth}{
-  TAIGA---Tunka Advanced Instrument for cosmic ray physics and Gamma Astronomy (see
-% 	https://
-  taiga-experiment.info);
-}
-\\\vspace{1em}
-\parbox{0.35\textwidth}{
-  \centering\includegraphics[width=0.35\textwidth]{pics/grande.pdf}
-}\hfill
-\parbox{0.60\textwidth}{
-  KASCADE-Grande---KArlsruhe Shower Core and Array DEtector---Grande\\ (see
-% 	http://
-  www-ik.fzk.de/KASCADE\_home.html);
-}
-\\\vspace{1em}
-\parbox{0.35\textwidth}{
-  \centering\includegraphics[width=0.30\textwidth]{pics/Logo_KIT_IKP.pdf}
-}\hfill
-\parbox{0.60\textwidth}{
-  KIT-IKP---Institute for Nuclear Physics Karlsruhe Institute of Technology
-}
-\\\vspace{1em}
-\parbox{0.35\textwidth}{
-  \centering\includegraphics[width=0.15\textwidth]{pics/SCC-Logo.png}
-}\hfill
-\parbox{0.60\textwidth}{
-  SCC---Steinbuch Centre for Computing Karlsruhe Institute of Technology
-}
-\\\vspace{1em}
-\parbox{0.20\textwidth}{
-  \centering\includegraphics[width=0.20\textwidth]{pics/SINP_MSU_LOGO.pdf}
-}\hfill
-\parbox{0.75\textwidth}{
-  SINP MSU---Skobeltsyn Institute Of Nuclear Physics Lomonosov Moscow State University
-}
-\\\vspace{1em}
-\parbox{0.20\textwidth}{
-  \centering\includegraphics[width=0.15\textwidth]{pics/isu_logo.png}
-}\hfill
-\parbox{0.75\textwidth}{
-  ISU---Irkutsk State University
-}
-\\\vspace{1em}
-\parbox{0.20\textwidth}{
-  \centering\includegraphics[width=0.18\textwidth]{pics/matr_logo.png}
-}\hfill
-\parbox{0.75\textwidth}{
-  ISDCT---Matrosov Institute for System Dynamics and Control Theory
-}
-\end{frame}
-
-\subsection{References}
-\begin{frame}{References}
-  \begin{itemize}
-   \item Berghöfer T., Agrafioti I. \textit{et al.} Towards a model for computing in European astroparticle physics,
-   Astroparticle Physics European Coordination committee, 2016,
-   web-source:~\texttt{http://appec.org/wp-content/uploads/\\Documents/Docs-from-old-site/AModelForComputing-2.pdf};
-   \item KCDC---\textbf{K}ASCADE \textbf{C}osmic Ray \textbf{D}ata \textbf{C}enter,\\
-   web-source:~\texttt{http://kcdc.ikp.kit.edu};
-   \item KASCADE-Grande official site, web-source:~\texttt{http://www-ik.fzk.de/KASCADE\_home.html};
-   \item TAIGA collaboration official site, web-source:~\texttt{http://taiga-experiment.info};
-   \item Astroparticle.online---outreach resource, web-source:~\texttt{http://astroparticle.online}.
-
-  \end{itemize}
-
-\end{frame}
-
-
-
-\backupend
-
+%BACKUP SLIDES
+% \input{appx.tex}
 \end{document}

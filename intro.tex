@@ -7,56 +7,51 @@
 \section{Introduction}
 
 \begin{frame}{Big data in astroparticle physics (APP)}
-%или "Астрофизика - современное состояние"))
-\small
-\begin{minipage}[c]{0.58\textwidth}
-  \begin{center}
-%       \includegraphics[width=1.5\textwidth]{pics/appec_base4.pdf}
-      \includegraphics[width=1\textwidth]{pics/appec_computing-diagram.pdf}
-  \end{center}
-  \vspace{-2\parsep}
-  \small Modern astroparticle experiments data rate [Gbytes/day]\footnotemark[1] %, source: APPEC brochure on Computing, 2016}
-\end{minipage}
-\hfill
-\begin{minipage}[c]{0.41\textwidth}
-  \begin{itemize}
-    \setlength{\itemsep}{0pt}
-    \item Wide range of experiments;
-    \item More than hundred years of cosmic particle measurements;
-    \item Looking at the same sky with different detectors;
-    \item Common data rate for astropartical physics experiments all together is a few PBytes/yeary, which is comparable to the current LHC output\footnotemark[1]
-    \item Big data for deep learning
-  \end{itemize}
-%     \textcolor{red}{TODO: дописать текста, чтобы сбалансирвоать дизайн страницы}
-\end{minipage}
-\footnotesize\footnotetext[1]{Berghöfer T., Agrafioti I. et all. Towards a model for computing in European astroparticle physics, Astroparticle Physics European Coordination committee, 2016}
-%   \\http://www.appec.org/wp-content/uploads/Documents/Docs-from-old-site/AModelForComputing-2.pdf}
+    \small
+    \begin{minipage}[c]{0.58\textwidth}
+        \begin{center}
+            \includegraphics[width=1\textwidth]{pics/appec_computing-diagram.pdf}
+        \end{center}
+        \vspace{-2\parsep}
+        \small Modern astroparticle experiments data rate [Gbytes/day]\footnotemark[1] %, source: APPEC brochure on Computing, 2016}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.41\textwidth}
+        \begin{itemize}
+            \setlength{\itemsep}{0pt}
+            \item Wide range of experiments;
+            \item More than hundred years of cosmic particle measurements;
+            \item Looking at the same sky with different detectors;
+            \item Common data rate for astropartical physics experiments all together is a few PBytes/yeary, which is comparable to the current LHC output\footnotemark[1]
+            \item Big data for deep learning
+        \end{itemize}
+    \end{minipage}
+    \footnotesize\footnotetext[1]{Berghöfer T., Agrafioti I. et all. Towards a model for computing in European astroparticle physics, Astroparticle Physics European Coordination committee, 2016}
 \end{frame}
 
 \begin{frame}{Software data life cycles}% and information management
-\begin{itemize}
+    \begin{itemize}
+        \item \textbf{Data engineering} includes development and support of data architecture and a data pipeline for a data platform that enables data analysts, scientists, and other personnel to query the data.
+        % and organization and support of a data pipeline that connects all the pieces of the data ecosystem together.
+        
+        \item \textbf{Data Life Cyce (DLC)} is the sequence of stages that a particular unit of data goes through from its initial generation 
+        or capture to its eventual archival and/or deletion. The typical data life cycle includes data gathering, processing, storage, analysis, sharing and archiving. 
+        % The data life cycle provides a high level overview of the stages involved in successful management and preservation of data for use and reuse.
 
-\item \textbf{Data engineering} includes development and support of data architecture and a data pipeline for a data platform that enables data analysts, scientists, and other personnel to query the data.
-% and organization and support of a data pipeline that connects all the pieces of the data ecosystem together.
- 
- \item \textbf{Data Life Cyce (DLC)} is the sequence of stages that a particular unit of data goes through from its initial generation 
-or capture to its eventual archival and/or deletion. The typical data life cycle includes data gathering, processing, storage, analysis, sharing and archiving. 
-% The data life cycle provides a high level overview of the stages involved in successful management and preservation of data for use and reuse.
-
-% \item \textbf{Data engineering} includes development of the architecture for a data platform that enables data analysts, scientists, and other curious 
-%  types to query their data and organization and support of a data pipeline that connects all the pieces of the data ecosystem together.
-%  
-%  \item \textbf{Data Life Cyce (DLC)} is the sequence of stages that a particular unit of data goes through from its initial generation 
-% or capture to its eventual archival and/or deletion. The typical data life cycle includes data gathering, processing, storage, analysis, sharing and archiving. The data life cycle provides a high level overview of the stages involved in successful management and preservation of data for use and reuse.
- 
-\end{itemize}
-
-\vspace{-1ex}
-\centering
-\includegraphics[width=0.65\textwidth]{pics/data_lifecycle_illust.jpg}
+        % \item \textbf{Data engineering} includes development of the architecture for a data platform that enables data analysts, scientists, and other curious 
+        %  types to query their data and organization and support of a data pipeline that connects all the pieces of the data ecosystem together.
+        %  
+        %  \item \textbf{Data Life Cyce (DLC)} is the sequence of stages that a particular unit of data goes through from its initial generation 
+        % or capture to its eventual archival and/or deletion. The typical data life cycle includes data gathering, processing, storage, analysis, sharing and archiving. The data life cycle provides a high level overview of the stages involved in successful management and preservation of data for use and reuse.
+    \end{itemize}
+    \vspace{-1ex}
+    \centering
+    \includegraphics[width=0.65\textwidth]{pics/data_lifecycle_illust.jpg}
 \end{frame}
 
+%contents
 \begin{frame}{Data engineering in APP}
+
 \begin{minipage}[c]{0.52\textwidth}
 \small
   \begin{itemize}
@@ -98,214 +93,4 @@ or capture to its eventual archival and/or deletion. The typical data life cycle
 \end{minipage}
 \end{frame}
 
-\begin{frame}{German-Russian Astroparticle \\Data Life Cycle Initiative\footnotemark[1]}
-\vspace{-1.4em}
-% \textcolor{red!50!black}{Change the collboration picture}
-\begin{center}
-  \includegraphics[width=0.9\textwidth]{pics/Collab-4.pdf}
-\end{center}
-\footnotesize\footnotetext[1]{Granted by RSF-Helmholtz Joint Research Groups}
-\end{frame}
-
-% \begin{frame}{KASCADE-Grande}
-% \begin{itemize}
-%   \item Proposed in 1989---disassembled in 2013;
-%   \item Aimed at studying
-%   high-evergy (galactic) cosmic rays by observing extensive air showers (EAS);
-% %   processes at the edge of the Galaxy and beyond by observing extended atmospheric showers (EAS);
-%   \item Consisted of:
-%   \begin{itemize}
-%     \item scintillators detecting $e$, $\gamma$, $\mu$:
-%     \begin{itemize}
-%   %сцинтиляторы, различают e, gamma, mu
-%     \item KASCADE---256 stations;
-%     \item GRANDE---37 stations;
-%     \end{itemize}
-%  %один большой калориметр
-%     \item Hadronic callorimeter;
-%  %радиодетектор
-%     \item Digital radio array LOPES detecting $e$, $e^{+}$;
-% % позволяющих наблюдать различные компоненты ливня
-%   \end{itemize}
-%   \item Important features of cosmic-ray spectrum have been obtained. The data analysis is ongoing;
-% %  благодаря данным с эксперимента было открыто много всего ополезного, при этом анлиз данных продолжается. новые статьи выходят
-%   \item KCDC (\textbf{K}ASCADE \textbf{C}osmic Ray \textbf{D}ata \textbf{C}enter, \textcolor{blue}{\texttt{http://kcdc.ikp.kit.edu}}) is a dedicated portal where all the data collected are available online. % At the moment
-% %   к настоящему времени все данные эксперимента опубликованы и доступны онлайн, для этих целей был сделан
-% %  принциально принципиально новый и крутой на тот момент портал KCDC
-% % \textcolor{red!50!black}{Add the kcdc logo in the center of the slide}
-% \end{itemize}
-%
-% \begin{tikzpicture}[remember picture,overlay]
-%   \node[xshift=-12ex,yshift=-21ex] at (current page.north east){%
-%     \includegraphics[width=0.3\textwidth]{pics/KCDC-Logo.png}
-%   };
-% \end{tikzpicture}
-% % \parbox[t][0pt]{0pt}{
-% %   \vspace{-0.63\textheight}
-% %   ~\hspace{0.68\textwidth}\includegraphics[width=0.3\textwidth]{pics/KCDC-Logo.png}
-% % }
-% \end{frame}
-%
-%
-%
-% \begin{frame}{TAIGA}
-% \footnotesize
-% \vspace{-1em}
-% \begin{itemize}
-%  \item Started in the mid 90s, is still operating and continiously enhancend
-% %  \item Currently consists of 4 detectors presented + TUNKA IACT is under construction;
-% \end{itemize}
-% \vspace{-2em}
-% \begin{minipage}[t]{0.31\textwidth}
-%   \begin{block}{\small Tunka-133}
-%     \parbox[c][0.20\textheight][t]{1\textwidth}{
-%       \centering
-%       \includegraphics[width=0.7742\textwidth]{pics/Tunka-133.jpg}
-%     }
-%     \hfill
-%     \parbox[c][0.15\textheight][t]{1\textwidth}{
-%       \begin{itemize}
-%         \setlength{\itemsep}{0pt}
-%         \item 133 photomultipliers
-%         \item measures EAS Cherenkov light
-%       \end{itemize}
-%     }
-%   \end{block}
-% \end{minipage}
-% \hfill
-% \begin{minipage}[t]{0.31\textwidth}
-%   \begin{block}{\small Tunka-Rex}
-%     \parbox[c][0.20\textheight][t]{1\textwidth}{
-%       \centering
-%       \includegraphics[width=0.7742\textwidth]{pics/Tunka-Rex.jpg}
-%     }
-%     \\
-%     \parbox[c][0.15\textheight][t]{1\textwidth}{
-%       \begin{itemize}
-%         \setlength{\itemsep}{0pt}
-%         \item 63 antennas
-%         \item measures EAS radio-emission
-%       \end{itemize}
-%     }
-%   \end{block}
-% \end{minipage}
-% \hfill
-% \begin{minipage}[t]{0.31\textwidth}
-%   \begin{block}{\small Tunka-HiSCORE}
-%     \parbox[c][0.20\textheight][t]{1\textwidth}{
-%       \centering
-%       \includegraphics[width=0.7742\textwidth]{pics/Tunka-HiSCORE.jpg}
-%     }
-%     \\
-%     \parbox[c][0.15\textheight][t]{1.1\textwidth}{
-%       \begin{itemize}
-%         \setlength{\itemsep}{0pt}
-%         \item 47$\times$4 photomultipliers
-%         \item measures EAS Cherenkov light
-%       \end{itemize}
-%     }
-%   \end{block}
-% \end{minipage}
-%
-% \vspace{-1ex}
-% \begin{minipage}[t]{0.48\textwidth}
-%   \begin{block}{\small Tunka-Grande}
-%     \parbox[c][0.21\textheight][t]{0.43\textwidth}{
-%       \includegraphics[width=0.50\textwidth]{pics/Hiller_Roman-005.jpg}
-%     }
-%     \hfill
-%     \parbox[c][0.21\textheight][t]{0.55\textwidth}{
-%       \begin{itemize}
-%         \setlength{\itemsep}{0pt}
-%         \item 380 scintillators 0.64m$^2$ each
-%         \item measures $e$/$\mu$ from EAS
-%       \end{itemize}
-%     }
-%   \end{block}
-% \end{minipage}
-% \hfill
-% \begin{minipage}[t]{0.48\textwidth}
-%   \begin{block}{\small Tunka-IACT}
-%     \parbox[c][0.21\textheight][t]{0.43\textwidth}{
-%       \includegraphics[width=0.50\textwidth]{pics/Tunka-Iact.jpg}
-%     }
-%     \hfill
-%     \parbox[c][0.21\textheight][t]{0.55\textwidth}{
-%       \begin{itemize}
-%         \setlength{\itemsep}{0pt}
-%         \item Imaging Air Cherenkov Telescopes
-%         \item is being extended
-%       \end{itemize}
-%     }
-%   \end{block}
-% \end{minipage}
-% \end{frame}
-%
-%
-\begin{frame}{The main objectives}
-\begin{minipage}[c]{0.45\textwidth}
-  \begin{itemize}
-    \item  Provide sustainable access to scientific data
-    \item  Archiving of Data and Metadata
-    \item  Providing analysis tools
-    \item  Education in Big Data Science
-  \end{itemize}
-\end{minipage}
-\hfill
-\begin{minipage}[c]{0.54\textwidth}
-  \includegraphics[width=1\textwidth]{pics/proj_objectives.pdf}
-\end{minipage}
-  \vspace{-\topsep}
-  \vspace{-\partopsep}
-  \vspace{\itemsep}
-  \vspace{\parsep}
-  \begin{itemize}
-    \item  Development area for multi-messenger analyses (e.g. Deep Learning)
-    \item  Platform for communication and exchange within Astroparticle Physics
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{DLC in APP specifics}
-\begin{minipage}[c]{0.64\textwidth}
-  \begin{itemize}
-    \item Experiments improve and are measuring events with greater precision (large amount of data);
-    \item But not too many events of our interest;
-    \item[$\Rightarrow$] combined analysis of data from different experiments becomes topical;
-    \item Astronomical Virtual Observatories (Auger \& IceCube data).
-%     \item  constantly growing precission and data amounts;
-%     \item rare events and low statistics;
-%     \item call for multi-messenger astrophysics;
-%     \item  need for various data in analysis;
-%     \item data mining in astroparticle data;
-%     \item Need for advanced storage architectures and smart data selection queries
-  \end{itemize}
-\end{minipage}
-\hfill
-\begin{minipage}[c]{0.35\textwidth}
-  \includegraphics[width=1\textwidth]{pics/ADLC.pdf}
-\end{minipage}
-\end{frame}
-
-\begin{frame}{APPDS Architecture}
-\begin{minipage}[c]{0.63\textwidth}
-  \includegraphics[width=1\textwidth]{pics/arch_appds.png}
-\end{minipage}
-\hfill
-\begin{minipage}[c]{0.36\textwidth}
-  \small
-  \begin{itemize}
-    \setlength{\itemsep}{0pt}
-%     \setlength{\parskip}{0pt}
-    \item\textbf{Si} — local data storages;
-    \item\textbf{Ini} — data sources of different types;
-    \item\textbf{MDD} — metadata description;
-    \item\textbf{Ei} — metadata extractors;
-    \item\textbf{Ai} — adapters, provide API for data access;
-    \item\textbf{TPL} — template library;
-    \item\textbf{MD DB} — metadata database.
-  \end{itemize}
-\end{minipage}
-\end{frame}
-
-
-
+\input{GRADLC-APPDS.tex}
