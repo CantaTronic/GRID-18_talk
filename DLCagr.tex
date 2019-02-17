@@ -1,5 +1,25 @@
 % Data aggregation server:
 
+\begin{frame}{Requirements for the data warehouse}
+ \begin{itemize}
+    \item Multiple experiments (TAIGA, KASKADE, etc.)
+    \item More than hundreds of terabytes of raw data at each site
+    \item Remote access to data as local file systems
+    \item  On-demand data transfer by requests only
+    \item  Automatic real-time updates
+    \item  No change to existing site infrastructure, only add-ons
+ \end{itemize}
+\end{frame}
+
+\begin{frame}{Proposed solution for data aggragation}
+\textbf{Main solution componennts}: CVMFS, PostgreSQL, TPL 
+    \begin{center}
+        \includegraphics[width=0.82\textwidth]{pics/agr.pdf}
+    \end{center}
+
+\end{frame}
+
+
     %Metadata architecture
     \begin{frame}{Proposed cosmic-ray metadata structure}
         \vspace{-1.5em}
