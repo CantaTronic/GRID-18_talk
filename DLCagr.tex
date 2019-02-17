@@ -2,17 +2,17 @@
 
 \begin{frame}{Requirements for the data warehouse}
  \begin{itemize}
-    \item Multiple experiments (TAIGA, KASKADE, etc.)
+    \item Multiple experiments (TAIGA, KASCADE, etc.)
     \item More than hundreds of terabytes of raw data at each site
     \item Remote access to data as local file systems
     \item  On-demand data transfer by requests only
     \item  Automatic real-time updates
-    \item  No change to existing site infrastructure, only add-ons
+    \item  No changes to existing site infrastructure, only add-ons
  \end{itemize}
 \end{frame}
 
-\begin{frame}{Proposed solution for data aggragation}
-\textbf{Main solution componennts}: CVMFS, PostgreSQL, TPL 
+\begin{frame}{Proposed solution for data aggregation}
+\textbf{Main solution components}: CVMFS, PostgreSQL, TPL
     \begin{center}
         \includegraphics[width=0.82\textwidth]{pics/agr.pdf}
     \end{center}
@@ -20,22 +20,22 @@
 \end{frame}
 
 
-    %Metadata architecture
-    \begin{frame}{Proposed cosmic-ray metadata structure}
-        \vspace{-1.5em}
-        \begin{center}
-            \includegraphics[width=0.82\textwidth]{pics/metadata.pdf}
-        \end{center}
-    \end{frame}
+%Metadata architecture
+\begin{frame}{Proposed cosmic-ray metadata structure}
+    \vspace{-1.5em}
+    \begin{center}
+        \includegraphics[width=0.82\textwidth]{pics/metadata.pdf}
+    \end{center}
+\end{frame}
 
-    %Data workflows 
-    \begin{frame}{Data workflow}
-        \vspace{-2em}
-        \centering
-        \only<1>{\includegraphics[width=1\textwidth]{pics/KRAD_workflow_curr.pdf}}
-        \only<2>{\includegraphics[width=1\textwidth]{pics/KRAD_workflow_hori.pdf}}
-    \end{frame}
+%Data workflows
+\begin{frame}{Data workflow}
+    \vspace{-2em}
+    \centering
+    \only<1>{\includegraphics[width=1\textwidth]{pics/KRAD_workflow_curr.pdf}}
+    \only<2>{\includegraphics[width=1\textwidth]{pics/KRAD_workflow_hori.pdf}}
+\end{frame}
 
-    % TODO:
-    %         Data summary and challenges (no slide so far :-( )
-    %         Possible solutions (postgres, cvmfs, etc...)
+% TODO:
+%         Data summary and challenges (no slide so far :-( )
+%         Possible solutions (postgres, cvmfs, etc...)
