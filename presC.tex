@@ -2,17 +2,40 @@
 \usepackage{templates/beamerthemekit}
 \titlelogo{empty_logo}
 
-\titleimage{my_intro}
+% \titleimage{my_intro}
+\titleimage{KASCADE-img}
 
-\title[Data engineering for astroparticle physics]{Data engineering for joint analysis of different astroparticle data in GRADLC project}
-\subtitle{Big Data Science in Astroparticle Research, Aachen University}
-\author[Victoria Tokareva]{
-  Victoria Tokareva for GRADLC Consortium ~\textbar~18-20 February 2019
-}
+\title[$\gamma$-ray search in air shower arrays]{Developing stacked-analysis methods for $\gamma$-ray search in air
+shower arrays}
+\subtitle{DPG-19, Aachen}
+\author[V.~Tokareva, A.~Haungs, D.~Kostunin]{
+  V.~Tokareva, A.~Haungs, D.~Kostunin\textbar~25-29 March 2019}
 
 \institute{Institute for Nuclear Physics (IKP)}
 
-\date{February 20, 2019}
+\date{March 26, 2019}
+
+% 0. Титульник (Serach for high-energy gamma-rays...) +
+% 1. Мотивация: зачем нужно изуать высокоэнергетические гамма? +
+% 2. HAWC-sources +
+% 3-4. CARPET2 results
+% 5. KASCADE data: Efficiency of registretion, exposure map *
+% 6. gamma/CR *
+% 7. Предел на diffuse gamma flux (рез-ты Донгвы) +
+% 8 - 10 Оценка количества событий вокруг 2HWC_J2013+415 +-
+% 11. Присоединение данных TAIGA (Tunka-133, HiSCORE) (как идея)
+%         отличие тунки от каскада, черенки/сцинтиляторы
+%         картинки с хмах
+%         мэппинг данных
+% 
+%         разделение гамма/кр тунка133 +
+% 12. Conclusion and future work
+% 
+% Bonus slides:
+% 13. data rates +
+% 14. KCDC +
+% 15. ML/DL opportunities +
+% 16. GRADLC initiative +
 
 % Bibliography
 
@@ -62,5 +85,9 @@
 \input{concl.tex}
 
 %BACKUP SLIDES
+\appendix
+\beginbackup
+\input{bonus.tex}
 \input{appx.tex}
+\backupend
 \end{document}
