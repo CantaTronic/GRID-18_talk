@@ -1,0 +1,13 @@
+Carpet-2:
+
+сл.1
+
+интересные результаты по установлению пределов на PeVные гамма были получены недавн ов эксперименте Carpet-2.
+- детектор: что за эксперимент, где находится, схема или фото
+
+сл.2
+
+- применили multi-messndger approach: наблюдали за потоком гамма со стороны IceCube high-energy (appr. 100 Tev) neutrino sources;
+(рисунок фейнмановской диаграммы?)
+- used the events recorded in the 2016-18 runs to search for concidences with Icecube events in direction and time.
+- constrain the potential flux of photons with energy E_gamma > 1 Pev to be < 5.4 * 10^-5 PeV/cm^2 with CL 95%.
