@@ -44,76 +44,55 @@
 
 \begin{frame}{High-energy $\gamma$-ray sources in KASCADE field of view}
 %   KASCADE data: Efficiency of registration, exposure map *
-  
-  \begin{center}
-    \includegraphics[width=1\textwidth]{pics/Skymap_6srcs.pdf}
-    
- KASCADE events distribution map
-  with 6 HAWC sources with energy \\$E$ above 56 TeV and galactic center and anti-center.
+\begin{minipage}[c]{0.73\textwidth}
+\begin{center}
+  \includegraphics[width=1\textwidth]{pics/Skymap_6srcs.pdf}\\
+  KASCADE event distribution map\\
+  with 6 HAWC sources\\
+  with energy $E$ above 56~TeV.
 \end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.25\textwidth}
+\includegraphics[width=1\textwidth]{pics/Skymap_2HWC_J2019+367.pdf}\\
+\includegraphics[width=1\textwidth]{pics/Skymap_2HWC_J2031+415.pdf}
+\end{minipage}
 \end{frame}
 
-\begin{frame}{KASCADE-Grande $\gamma$ ray searches}
-\begin{itemize}
- \item Limits on the ratio of diffuse gamma-ray flux to cosmic ray flux
-\end{itemize}
-
+\begin{frame}{Data analysis}
 \begin{center}
-    \includegraphics[width=0.90\textwidth]{pics/KASCADE-Grande_UHECR2016.pdf}
+  \includegraphics[height=0.39\textheight]{pics/eff_Ne_Donghwa.pdf}\hspace{1em}
+  \includegraphics[height=0.39\textheight]{pics/gamma_cut.png}\\
+  \includegraphics[height=0.42\textheight]{pics/Skyexp_mc.pdf}
 \end{center}
 \end{frame}
 
 \begin{frame}{KASCADE-Grande $\gamma$ ray searches}
 \begin{itemize}
  \item Limits on the diffuse gamma-ray flux: the best upper limit of the fraction of $\gamma$-rays
-to the total cosmic ray flux is obtained at $3.7 \times 10^{15}$~eV with $1.1 \times 10^{-5}$. 
+to the total cosmic ray flux is obtained at $3.7 \times 10^{15}$~eV and equals $1.1 \times 10^{-5}$. 
 \end{itemize}
-
 \begin{center}
-    \includegraphics[width=0.57\textwidth]{pics/KASCADE-Grande_UHECR2016-2.pdf}
+  \includegraphics[height=0.56\textheight]{pics/KASCADE-Grande_UHECR2016-1.pdf}
+  \includegraphics[height=0.56\textheight]{pics/KASCADE-Grande_UHECR2016-2.pdf}
 \end{center}
-\end{frame}
-
-\begin{frame}{$\gamma$-proton separation}
+\vspace{-2ex}
 \small
-% \begin{figure}[h]
-\vspace{-1em}
-\begin{center}
-    \includegraphics[width=0.65\textwidth]{pics/Nmu_Ne.pdf}
-    
-    Distribution of $N_\mu / N_e$ for various primary CR components.
-\end{center}
-%   Распределение компонент ливня в зависимости от соотношения мюоной и электронной компоненты ливня
-% \caption{
-% \vspace{1em}
-% }
-%  \end{figure}
-Taking into account this distribution and the flux upper-limit mentioned above we can make the 
-$N_\mu/N_e \in [0, 0.008)$ cut to discriminate $\gamma$ component with ... C.L.
-\end{frame}
-
-\begin{frame}{HAWC high-energy sources in KASCADE field of view}
- \begin{center}
-    \includegraphics[width=1\textwidth]{pics/2HWCsources.pdf}
-    
- Events by KASCADE in $5^0$ radius around the point sources $2HWC_J2019+367$, $2HWC_J2031+415$ correspondingly.
-
-\end{center}
+[1] W.~Apel et al., \textit{KASCADE-Grande Limits on the Isotropic Diffuse Gamma-Ray Flux between 100~TeV and 1~EeV}, 2017, ApJ, 848, 1.
 \end{frame}
 
 
-\begin{frame}{KASCADE statistics estimation for $2HWC_J2013+415$}
-
-\begin{table}[]
-\begin{tabular}{lll}
-E &       N &      $F_{int}$  \\
-7 & 440.9659202598506 & 1.406167411764706e-13\\
-56 & 12.857367242057173 & 4.100001833751227e-15\\
-100 & 4.798126510222744 & 1.5300432133675341e-15\\
-1000 & 0.09573521008300581 & 3.052837563906128e-17\\
-\end{tabular}
-\end{table}
-
+\begin{frame}{KASCADE statistics estimation for \textit{2HWC\_J2013+415}}
+\[
+\Large
+\begin{array}{ccc}
+E~[\mathrm{TeV}] & N & F_\mathrm{int}~[\mathrm{cm}^{-2}\mathrm{s}^{-1}] \\\hline
+7 & 441 & 1.4\times10^{-13}\\
+56 & 12.9 & 4.1\times10^{-15}\\
+100 & 4.8 & 1.5\times10^{-15}\\
+1000 & 0.096 & 3.1\times10^{-17}\\
+\end{array}
+\]
 % There supposed to be 2 slides on this
 %  Оценка количества событий вокруг 2HWC_J2013+415 +-
 \end{frame}
