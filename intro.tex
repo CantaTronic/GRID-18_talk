@@ -21,7 +21,7 @@
             \includegraphics[width=1\textwidth]{pics/appec_computing-diagram.pdf}
         \end{center}
         \vspace{-2\parsep}
-        \small Modern astroparticle experiments data rate [Gbytes/day]\footnotemark[1] %, source: APPEC brochure on Computing, 2016}
+        \small Modern astroparticle experiments data rate [GBytes/day]\footnotemark[1] %, source: APPEC brochure on Computing, 2016}
     \end{minipage}
     \hfill
     \begin{minipage}[c]{0.41\textwidth}
@@ -34,69 +34,28 @@
             \item Big data for deep learning
         \end{itemize}
     \end{minipage}
-    \footnotesize\footnotetext[1]{Berghöfer T., Agrafioti I. et all. Towards a model for computing in European astroparticle physics, Astroparticle Physics European Coordination committee, 2016}
+    \footnotesize\footnotetext[1]{Berghöfer T., Agrafioti I. et al. Towards a model for computing in European astroparticle physics, Astroparticle Physics European Coordination committee, 2016}
 \end{frame}
 
-\begin{frame}{Software data life cycles}% and information management
+\begin{frame}{Features of DLC in APP}
     \begin{itemize}
-        \item \textbf{Data engineering} includes development and support of data architecture and a data pipeline for a platform that enables data analysts, scientists, and other personnel to query the data.
-        % and organization and support of a data pipeline that connects all the pieces of the data ecosystem together.
-        
         \item \textbf{Data Life Cycle (DLC)} is the sequence of stages that a particular unit of data goes through from its initial generation 
         or capture to its eventual archival and/or deletion. The typical data life cycle includes data gathering, processing, storage, analysis, sharing and archiving. 
-        % The data life cycle provides a high level overview of the stages involved in successful management and preservation of data for use and reuse.
-
-        % \item \textbf{Data engineering} includes development of the architecture for a data platform that enables data analysts, scientists, and other curious 
-        %  types to query their data and organization and support of a data pipeline that connects all the pieces of the data ecosystem together.
-        %  
-        %  \item \textbf{Data Life Cyce (DLC)} is the sequence of stages that a particular unit of data goes through from its initial generation 
-        % or capture to its eventual archival and/or deletion. The typical data life cycle includes data gathering, processing, storage, analysis, sharing and archiving. The data life cycle provides a high level overview of the stages involved in successful management and preservation of data for use and reuse.
     \end{itemize}
-    \vspace{-1ex}
-    \centering
-    \includegraphics[width=0.65\textwidth]{pics/data_lifecycle_illust.jpg}
-\end{frame}
 
-%contents
-% \begin{frame}{Data engineering in APP}
-% 
-% \begin{minipage}[c]{0.52\textwidth}
-% % \small
-%   \begin{itemize}
-%       \setlength{\itemsep}{0pt}
-% %       \item  Introduction \textcolor{kit-green100}{$\rightarrow$ we are here}
-%       \item  GRADLC initiative and main objectives
-%       \item  Features of DLC in APP
-%       \item  KASCADE Cosmic-ray Data Center
-%       \item  Proposed DLC architecture
-%       \item  Data aggregation server: metadata, data summary and workflows
-% %       \begin{itemize}
-% % 	  \item Metadata architecture
-% % 	  \item Data workflows 
-% % 	  \item Data summary and challenges (no slide so far :-( )
-% % 	  \item Possible solutions (postgres, cvmfs, etc...)
-% %       \end{itemize}
-%       \item   Application server: conception, computing sources and analysis
-% %       \begin{item}
-% % 	  \item conception 
-% % 	  \item computing sources
-% % 	  \item analysis 
-% % 	  \item possible solutions
-% %       \end{item}
-% %       \item  Example: stacked analysis of high-energetic gamma rays
-%       \item  Outlook
-% %     \item  DCL in APP - specific
-% %     \item  DCL architecture
-% %     \item  Experiments and data specific
-% %     \item  Joint analysis scheme
-% %     \item  Possible solutions
-% %     \item  Outlook and future work
-%   \end{itemize}
-% \end{minipage}
-% \hfill
-% \begin{minipage}[c]{0.47\textwidth}
-%   \includegraphics[width=1\textwidth]{pics/DE_fun.pdf}
-% \end{minipage}
-% \end{frame}
+    \begin{minipage}[c]{0.35\textwidth}
+        \includegraphics[width=1\textwidth]{pics/ADLC.pdf}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.64\textwidth}
+        \begin{itemize}
+            \item Constantly growing precision and data amounts;
+            \item Call for multi-messenger astrophysics;
+            \item Data mining in astroparticle data;
+            \item Need for various data in analysis;
+            \item Need for advanced storage architectures and smart data selection queries.
+        \end{itemize}
+    \end{minipage}
+\end{frame}
 
 \input{GRADLC-APPDS.tex}
