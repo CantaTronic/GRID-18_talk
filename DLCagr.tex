@@ -1,6 +1,14 @@
-% Data aggregation server:
 
-\begin{frame}{Requirements for the data warehouse}
+%Metadata architecture
+\begin{frame}{Proposed cosmic-ray metadata structure}
+    \vspace{-1.5em}
+    \begin{center}
+        \includegraphics[width=0.82\textwidth]{pics/metadata.pdf}
+    \end{center}
+\end{frame}
+
+% Data aggregation server:
+\begin{frame}{Requirements for the data storage}
   \begin{itemize}
     \item Multiple experiments (TAIGA, KASCADE, etc.);
     \item Terabytes of data (of different reconstruction level) at each site;
@@ -11,12 +19,4 @@
   \end{itemize}
   \vspace{1em}
   \textbf{Main solution components}: CVMFS, PostgreSQL, TPL.
-\end{frame}
-
-%Metadata architecture
-\begin{frame}{Proposed cosmic-ray metadata structure}
-    \vspace{-1.5em}
-    \begin{center}
-        \includegraphics[width=0.82\textwidth]{pics/metadata.pdf}
-    \end{center}
 \end{frame}
